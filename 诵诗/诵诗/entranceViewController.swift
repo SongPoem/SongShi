@@ -42,8 +42,8 @@ class entranceViewController: UIViewController{
         onlyBut.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toLevels)))
         
         //test
-//        var a = secondView()
-//        a.reOrderSentence(s1: "床前明月光", s2: "疑是地上霜")
+        let a = secondView()
+        a.reOrderSentence(s1: "小楼昨夜又东风", s2: "故国不堪回首明月")
         
     }
     
@@ -101,7 +101,7 @@ class entranceViewController: UIViewController{
     
     func toLevels(){
         performSegue(withIdentifier: "toLevels", sender: self)
-        print("yes")
+//        print("yes")
         
     }
     
