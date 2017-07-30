@@ -39,7 +39,7 @@ class LevelsViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         initButton(button: first, width: 96, height: 150, name:"1")
         initButton(button: second, width: 96, height: 150, name: "2")
         initButton(button: third, width: 96, height: 150, name: "3")
@@ -53,13 +53,7 @@ class LevelsViewController: UIViewController{
         //adjustments to button font
         bulidArr()
         enableButtons()
-        
-        let levelsViewController = storyboard?.instantiateViewController(withIdentifier: "mainView") as! LevelsViewController
-        self.view.window?.rootViewController = levelsViewController
-        
-        let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-        self.navigationItem.backBarButtonItem = item
-        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
+//        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func switchToSingleView(_ sender: UIButton) {
@@ -84,6 +78,7 @@ class LevelsViewController: UIViewController{
         performSegue(withIdentifier: "mainToSingle", sender: sender)
 
     }
+    
     
     //set levelButton
     func initButton(button:UIButton, width: CGFloat, height: CGFloat, name:String){
@@ -215,11 +210,10 @@ class LevelsViewController: UIViewController{
     @IBAction func switchLevels(_ sender: UIButton){
         //切换
         BGSwitch()
-        sender.setTitleColor(UIColor(colorLiteralRed: 35/255, green: 98/255, blue: 118/255, alpha: 1), for: .normal)
-        sender.titleLabel?.font = UIFont.init(name: "TypeLand KhangXi Dict Demo", size: 64)
-        switcherArr[viewTag.viewtag].setTitleColor(UIColor(colorLiteralRed: 102/255, green: 102/255, blue: 102/255, alpha: 1), for: .normal)
-        
         if sender.titleLabel != switcherArr[viewTag.viewtag].titleLabel {
+            sender.setTitleColor(UIColor(colorLiteralRed: 35/255, green: 98/255, blue: 118/255, alpha: 1), for: .normal)
+            sender.titleLabel?.font = UIFont.init(name: "TypeLand KhangXi Dict Demo", size: 64)
+            switcherArr[viewTag.viewtag].setTitleColor(UIColor(colorLiteralRed: 102/255, green: 102/255, blue: 102/255, alpha: 1), for: .normal)
             switcherArr[viewTag.viewtag].titleLabel?.font = UIFont.init(name: "TypeLand KhangXi Dict Demo", size: 32)
         }
         
