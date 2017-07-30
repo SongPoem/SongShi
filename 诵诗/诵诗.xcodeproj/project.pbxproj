@@ -40,7 +40,6 @@
 		0409EF471E854F6100DB2596 /* 谷雨.png in Resources */ = {isa = PBXBuildFile; fileRef = 0409EF2A1E854F6000DB2596 /* 谷雨.png */; };
 		0409EF481E854F6100DB2596 /* 雨水.png in Resources */ = {isa = PBXBuildFile; fileRef = 0409EF2B1E854F6000DB2596 /* 雨水.png */; };
 		0409EF491E854F6100DB2596 /* 霜降.png in Resources */ = {isa = PBXBuildFile; fileRef = 0409EF2C1E854F6000DB2596 /* 霜降.png */; };
-		0409EF4B1E854F8200DB2596 /* 康熙字典體(Demo).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0409EF4A1E854F8200DB2596 /* 康熙字典體(Demo).ttf */; };
 		0477BFC51EA8941F009B7B25 /* explainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477BFC41EA8941F009B7B25 /* explainViewController.swift */; };
 		0477BFD01EAC6BB0009B7B25 /* 赏析选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 0477BFCE1EAC6BB0009B7B25 /* 赏析选中.png */; };
 		0477BFD11EAC6BB0009B7B25 /* 赏析未选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 0477BFCF1EAC6BB0009B7B25 /* 赏析未选中.png */; };
@@ -108,6 +107,13 @@
 		188AFBFA1EB39AD500A4DD94 /* PBG16.png in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBE81EB39AD500A4DD94 /* PBG16.png */; };
 		188AFBFB1EB39AD500A4DD94 /* PBG17.png in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBE91EB39AD500A4DD94 /* PBG17.png */; };
 		188AFBFC1EB39AD500A4DD94 /* PBG18.png in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBEA1EB39AD500A4DD94 /* PBG18.png */; };
+		189E55361F2CCF0900B6F4D6 /* 登录.png in Resources */ = {isa = PBXBuildFile; fileRef = 189E55341F2CCF0900B6F4D6 /* 登录.png */; };
+		189E55371F2CCF0900B6F4D6 /* 注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 189E55351F2CCF0900B6F4D6 /* 注册.png */; };
+		189E553A1F2CD51B00B6F4D6 /* 注册按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 189E55381F2CD51B00B6F4D6 /* 注册按钮.png */; };
+		189E553B1F2CD51B00B6F4D6 /* 登录按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 189E55391F2CD51B00B6F4D6 /* 登录按钮.png */; };
+		189E55961F2CD75800B6F4D6 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E55951F2CD75800B6F4D6 /* loginViewController.swift */; };
+		189E55981F2CD84B00B6F4D6 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E55971F2CD84B00B6F4D6 /* registerViewController.swift */; };
+		189E55FF1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 189E55FE1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf */; };
 		95C11F3B1EAF6DF600F94B4A /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -147,7 +153,6 @@
 		0409EF2A1E854F6000DB2596 /* 谷雨.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "谷雨.png"; sourceTree = "<group>"; };
 		0409EF2B1E854F6000DB2596 /* 雨水.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雨水.png"; sourceTree = "<group>"; };
 		0409EF2C1E854F6000DB2596 /* 霜降.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "霜降.png"; sourceTree = "<group>"; };
-		0409EF4A1E854F8200DB2596 /* 康熙字典體(Demo).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "康熙字典體(Demo).ttf"; path = "../../康熙字典體(Demo).ttf"; sourceTree = "<group>"; };
 		0477BFC41EA8941F009B7B25 /* explainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = explainViewController.swift; sourceTree = "<group>"; };
 		0477BFCE1EAC6BB0009B7B25 /* 赏析选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "赏析选中.png"; sourceTree = "<group>"; };
 		0477BFCF1EAC6BB0009B7B25 /* 赏析未选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "赏析未选中.png"; sourceTree = "<group>"; };
@@ -216,6 +221,13 @@
 		188AFBE81EB39AD500A4DD94 /* PBG16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBG16.png; sourceTree = "<group>"; };
 		188AFBE91EB39AD500A4DD94 /* PBG17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBG17.png; sourceTree = "<group>"; };
 		188AFBEA1EB39AD500A4DD94 /* PBG18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBG18.png; sourceTree = "<group>"; };
+		189E55341F2CCF0900B6F4D6 /* 登录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录.png"; sourceTree = "<group>"; };
+		189E55351F2CCF0900B6F4D6 /* 注册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册.png"; sourceTree = "<group>"; };
+		189E55381F2CD51B00B6F4D6 /* 注册按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "注册按钮.png"; sourceTree = "<group>"; };
+		189E55391F2CD51B00B6F4D6 /* 登录按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录按钮.png"; sourceTree = "<group>"; };
+		189E55951F2CD75800B6F4D6 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = "诵诗/loginViewController.swift"; sourceTree = SOURCE_ROOT; };
+		189E55971F2CD84B00B6F4D6 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		189E55FE1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "康熙字典體(Demo).ttf"; sourceTree = "<group>"; };
 		95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +269,8 @@
 				95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */,
 				04B5127A1EA7122400E986A0 /* Resource */,
 				0409EEE81E854E7F00DB2596 /* AppDelegate.swift */,
+				189E55951F2CD75800B6F4D6 /* loginViewController.swift */,
+				189E55971F2CD84B00B6F4D6 /* registerViewController.swift */,
 				0409EEFA1E854E9800DB2596 /* LevelsViewController.swift */,
 				0409EEEA1E854E7F00DB2596 /* ViewController.swift */,
 				0409EEEC1E854E7F00DB2596 /* Main.storyboard */,
@@ -293,7 +307,7 @@
 				0477BFCF1EAC6BB0009B7B25 /* 赏析未选中.png */,
 				04B512261EA6609500E986A0 /* 二.png */,
 				04B512271EA6609500E986A0 /* 一.png */,
-				0409EF4A1E854F8200DB2596 /* 康熙字典體(Demo).ttf */,
+				189E55FE1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf */,
 				04B2FF6E1E8917C200753E38 /* BG.png */,
 				0409EF111E854F6000DB2596 /* 冬.png */,
 				0409EF121E854F6000DB2596 /* 冬至.png */,
@@ -339,6 +353,10 @@
 		04B5127A1EA7122400E986A0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				189E55391F2CD51B00B6F4D6 /* 登录按钮.png */,
+				189E55381F2CD51B00B6F4D6 /* 注册按钮.png */,
+				189E55341F2CCF0900B6F4D6 /* 登录.png */,
+				189E55351F2CCF0900B6F4D6 /* 注册.png */,
 				188AFBD91EB39AD400A4DD94 /* PBG1.png */,
 				188AFBDA1EB39AD400A4DD94 /* PBG2.png */,
 				188AFBDB1EB39AD400A4DD94 /* PBG3.png */,
@@ -448,7 +466,6 @@
 				188AFBFC1EB39AD500A4DD94 /* PBG18.png in Resources */,
 				1811E60E1EAF808D000080B6 /* 正确.png in Resources */,
 				188AFBEB1EB39AD500A4DD94 /* PBG1.png in Resources */,
-				0409EF4B1E854F8200DB2596 /* 康熙字典體(Demo).ttf in Resources */,
 				0409EF471E854F6100DB2596 /* 谷雨.png in Resources */,
 				188AFBEE1EB39AD500A4DD94 /* PBG4.png in Resources */,
 				188AFBF01EB39AD500A4DD94 /* PBG6.png in Resources */,
@@ -481,6 +498,8 @@
 				188AFBF21EB39AD500A4DD94 /* PBG8.png in Resources */,
 				0409EF3E1E854F6100DB2596 /* 清明.png in Resources */,
 				188AFBF31EB39AD500A4DD94 /* PBG9.png in Resources */,
+				189E55FF1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf in Resources */,
+				189E553A1F2CD51B00B6F4D6 /* 注册按钮.png in Resources */,
 				04B512281EA6609500E986A0 /* 二.png in Resources */,
 				0409EF381E854F6100DB2596 /* 小暑.png in Resources */,
 				188AFBF91EB39AD500A4DD94 /* PBG15.png in Resources */,
@@ -512,6 +531,7 @@
 				0409EF351E854F6100DB2596 /* 大雪.png in Resources */,
 				188AFBEC1EB39AD500A4DD94 /* PBG2.png in Resources */,
 				1811E61C1EB0AD9B000080B6 /* 引导页5.png in Resources */,
+				189E55361F2CCF0900B6F4D6 /* 登录.png in Resources */,
 				0409EF451E854F6100DB2596 /* 立秋.png in Resources */,
 				1811E61E1EB0AD9B000080B6 /* 引导页3.png in Resources */,
 				188AFBD11EB3976400A4DD94 /* 启动页retina4.png in Resources */,
@@ -527,6 +547,7 @@
 				04D171661F2C5AFB0050CD92 /* 向左.png in Resources */,
 				0409EF341E854F6100DB2596 /* 大暑.png in Resources */,
 				0409EF321E854F6100DB2596 /* 夏至.png in Resources */,
+				189E55371F2CCF0900B6F4D6 /* 注册.png in Resources */,
 				188AFBC91EB3955D00A4DD94 /* icon2-87.png in Resources */,
 				0409EF301E854F6100DB2596 /* 处暑.png in Resources */,
 				0409EF461E854F6100DB2596 /* 芒种.png in Resources */,
@@ -535,6 +556,7 @@
 				0409EF311E854F6100DB2596 /* 夏.png in Resources */,
 				188AFBD31EB3976400A4DD94 /* 启动页2x.png in Resources */,
 				181D1AFD1EADB4A600D806FD /* 诵印章.png in Resources */,
+				189E553B1F2CD51B00B6F4D6 /* 登录按钮.png in Resources */,
 				1811E6131EAF856F000080B6 /* 返回主界面选中.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,10 +571,12 @@
 				0477BFC51EA8941F009B7B25 /* explainViewController.swift in Sources */,
 				0409EEFB1E854E9800DB2596 /* LevelsViewController.swift in Sources */,
 				188AFBD81EB39AB800A4DD94 /* singleViewController.swift in Sources */,
+				189E55981F2CD84B00B6F4D6 /* registerViewController.swift in Sources */,
 				04D171631F2B75B20050CD92 /* entranceViewController.swift in Sources */,
 				0409EEEB1E854E7F00DB2596 /* ViewController.swift in Sources */,
 				0409EEE91E854E7F00DB2596 /* AppDelegate.swift in Sources */,
 				95C11F3B1EAF6DF600F94B4A /* GuideViewController.swift in Sources */,
+				189E55961F2CD75800B6F4D6 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
