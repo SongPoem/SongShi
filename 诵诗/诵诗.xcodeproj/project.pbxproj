@@ -58,6 +58,7 @@
 		04D171631F2B75B20050CD92 /* entranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D171621F2B75B20050CD92 /* entranceViewController.swift */; };
 		04D171661F2C5AFB0050CD92 /* 向左.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D171641F2C5AFB0050CD92 /* 向左.png */; };
 		04D171671F2C5AFC0050CD92 /* 向右.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D171651F2C5AFB0050CD92 /* 向右.png */; };
+		04D1716B1F2DA29E0050CD92 /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1716A1F2DA29E0050CD92 /* secondView.swift */; };
 		1811E60E1EAF808D000080B6 /* 正确.png in Resources */ = {isa = PBXBuildFile; fileRef = 1811E60B1EAF808D000080B6 /* 正确.png */; };
 		1811E60F1EAF808D000080B6 /* 错误.png in Resources */ = {isa = PBXBuildFile; fileRef = 1811E60C1EAF808D000080B6 /* 错误.png */; };
 		1811E6101EAF808D000080B6 /* 检验.png in Resources */ = {isa = PBXBuildFile; fileRef = 1811E60D1EAF808D000080B6 /* 检验.png */; };
@@ -171,6 +172,7 @@
 		04D171621F2B75B20050CD92 /* entranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = entranceViewController.swift; sourceTree = "<group>"; };
 		04D171641F2C5AFB0050CD92 /* 向左.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向左.png"; sourceTree = "<group>"; };
 		04D171651F2C5AFB0050CD92 /* 向右.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向右.png"; sourceTree = "<group>"; };
+		04D1716A1F2DA29E0050CD92 /* secondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		1811E60B1EAF808D000080B6 /* 正确.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正确.png"; sourceTree = "<group>"; };
 		1811E60C1EAF808D000080B6 /* 错误.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错误.png"; sourceTree = "<group>"; };
 		1811E60D1EAF808D000080B6 /* 检验.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "检验.png"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				189E55951F2CD75800B6F4D6 /* loginViewController.swift */,
 				189E55971F2CD84B00B6F4D6 /* registerViewController.swift */,
 				0409EEFA1E854E9800DB2596 /* LevelsViewController.swift */,
+				04D1716A1F2DA29E0050CD92 /* secondView.swift */,
 				0409EEEA1E854E7F00DB2596 /* ViewController.swift */,
 				0409EEEC1E854E7F00DB2596 /* Main.storyboard */,
 				0477BFC41EA8941F009B7B25 /* explainViewController.swift */,
@@ -570,6 +573,7 @@
 			files = (
 				0477BFC51EA8941F009B7B25 /* explainViewController.swift in Sources */,
 				0409EEFB1E854E9800DB2596 /* LevelsViewController.swift in Sources */,
+				04D1716B1F2DA29E0050CD92 /* secondView.swift in Sources */,
 				188AFBD81EB39AB800A4DD94 /* singleViewController.swift in Sources */,
 				189E55981F2CD84B00B6F4D6 /* registerViewController.swift in Sources */,
 				04D171631F2B75B20050CD92 /* entranceViewController.swift in Sources */,

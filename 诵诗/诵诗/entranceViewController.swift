@@ -28,7 +28,22 @@ class entranceViewController: UIViewController{
         gestToLeft.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(gestToLeft)
         
+        //set navigationBar
+        self.navigationController?.isNavigationBarHidden = false
+        //transparent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        
+        let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = item
+        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
+        
         onlyBut.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toLevels)))
+        
+        //test
+//        var a = secondView()
+//        a.reOrderSentence(s1: "床前明月光", s2: "疑是地上霜")
         
     }
     

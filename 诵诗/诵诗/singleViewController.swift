@@ -84,7 +84,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         super.viewDidLoad()
         
         //使用用户数据，设置教学*****
-
+        
         initInputText()
         initBackground()
         initLabel()
@@ -146,7 +146,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                 dbname = String.init(cString: xdbname)
                 dbname = "|\n|︽"+dbname+"︾"
             }
-
+            
             for i in 3...6{
                 //读
                 if let temp = UnsafePointer(sqlite3_column_text(singleViewController.stmt, Int32(i))){
@@ -322,9 +322,9 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             checkButton.setBackgroundImage(UIImage(named: "检验.png"), for: UIControlState.normal)
             ifClickRecord = false
             checkButton.isUserInteractionEnabled = false
-//            checkButton.isEnabled = false
+            //            checkButton.isEnabled = false
             poemlabel[blankNum].isUserInteractionEnabled = false
-//            inputText.isEnabled = false
+            //            inputText.isEnabled = false
             
         } else{
             audioEngine.stop()
@@ -334,9 +334,9 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             readButton.setBackgroundImage(UIImage(named: "诵印章.png"), for: UIControlState.normal)
             ifClickRecord = true
             checkButton.isUserInteractionEnabled = true
-//            checkButton.isEnabled = true
+            //            checkButton.isEnabled = true
             poemlabel[blankNum].isUserInteractionEnabled = true
-//            inputText.isEnabled = true
+            //            inputText.isEnabled = true
             readcheck()
             self.checkIfRight()
             
@@ -356,7 +356,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             sqlite3_close(singleViewController.db)
             print(path!)
         }
-
+        
     }
     
     func operateQuery(){
@@ -384,7 +384,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             }
             sqlite3_close(singleViewController.db)
         }
-//        print(Int(sqlite3_column_int(singleViewController.stmt, 7)))
+        //        print(Int(sqlite3_column_int(singleViewController.stmt, 7)))
     }
     
     
@@ -449,39 +449,39 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                 
                 self.audioEngine.stop()
                 
-//                if ((self.userpoem != nil)&&(self.blank != nil)){
-//                    var userstr = NSMutableString(string: self.userpoem!) as CFMutableString
-//                    
-//                    var userpinyin: String?
-//                    var dbpinyin: String?
-//                    
-//                    if CFStringTransform(userstr,nil, kCFStringTransformMandarinLatin, false) == true{
-//                        if CFStringTransform(userstr,nil, kCFStringTransformStripDiacritics, false) == true{
-//                            print(userstr)
-//                            //获取用户答案的拼音
-//                            userpinyin = userstr as String
-//                            
-//                        }
-//                    }
-//                    
-//                    var dbstr = NSMutableString(string: self.blank!) as CFMutableString
-//                    if CFStringTransform(dbstr,nil, kCFStringTransformMandarinLatin, false) == true{
-//                        if CFStringTransform(dbstr,nil, kCFStringTransformStripDiacritics, false) == true{
-//                            //获取数据库答案的拼音
-//                            dbpinyin = dbstr as String
-//                        }
-//                    }
-//                    
-//                    if (userpinyin != nil)&&(dbpinyin != nil){
-//                        self.Issuccess = self.checklike(strread: userpinyin!, strpoem: dbpinyin!)
-//                    }
-//                    
-//                }
-//                else{
-//                    
-//                    self.Issuccess = false
-//                    
-//                }
+                //                if ((self.userpoem != nil)&&(self.blank != nil)){
+                //                    var userstr = NSMutableString(string: self.userpoem!) as CFMutableString
+                //
+                //                    var userpinyin: String?
+                //                    var dbpinyin: String?
+                //
+                //                    if CFStringTransform(userstr,nil, kCFStringTransformMandarinLatin, false) == true{
+                //                        if CFStringTransform(userstr,nil, kCFStringTransformStripDiacritics, false) == true{
+                //                            print(userstr)
+                //                            //获取用户答案的拼音
+                //                            userpinyin = userstr as String
+                //
+                //                        }
+                //                    }
+                //
+                //                    var dbstr = NSMutableString(string: self.blank!) as CFMutableString
+                //                    if CFStringTransform(dbstr,nil, kCFStringTransformMandarinLatin, false) == true{
+                //                        if CFStringTransform(dbstr,nil, kCFStringTransformStripDiacritics, false) == true{
+                //                            //获取数据库答案的拼音
+                //                            dbpinyin = dbstr as String
+                //                        }
+                //                    }
+                //
+                //                    if (userpinyin != nil)&&(dbpinyin != nil){
+                //                        self.Issuccess = self.checklike(strread: userpinyin!, strpoem: dbpinyin!)
+                //                    }
+                //
+                //                }
+                //                else{
+                //
+                //                    self.Issuccess = false
+                //
+                //                }
                 
                 
                 inputNode.removeTap(onBus: 0)
@@ -551,8 +551,8 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     func checkIfRight(){
         
         fillIn = inputText.text
-//        fillIn = "心悦君兮君不知"
-//        && poemlabel[blankNum].text != blankFrame
+        //        fillIn = "心悦君兮君不知"
+        //        && poemlabel[blankNum].text != blankFrame
         if fillIn == blank  {
             checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
             poemlabel[blankNum].text = blank
@@ -567,7 +567,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
             
             return
-
+            
             
         } else if inputText.text == nil{
             return
@@ -585,7 +585,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         
         if slide.direction == UISwipeGestureRecognizerDirection.left && poemlabel[blankNum].text == blank {
             if(levelNum % 10 == 0||addition == 9){
-//                出现当前关卡名字，闯关成功界面，没有其他按钮 只能返回关卡界面
+                //                出现当前关卡名字，闯关成功界面，没有其他按钮 只能返回关卡界面
                 
                 readButton.removeFromSuperview()
                 inputText.removeFromSuperview()
@@ -708,11 +708,11 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         
         //readButton.isEnabled = false
         //checkButton.isEnabled = false
-//        inputText.isEnabled = false 
+        //        inputText.isEnabled = false
         
         
         //poemlabel[blankNum].isUserInteractionEnabled = false
-//        poemlabel[blankNum].isEnabled = false
+        //        poemlabel[blankNum].isEnabled = false
         
         
         let level = Int(sqlite3_column_int(singleViewController.stmt, 0)) + 1
@@ -722,7 +722,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         }
         
         nexton = true
-
+        
         let name = UILabel()
         name.font = UIFont(name: "FZQingKeBenYueSongS-R-GB", size: 20)
         name.numberOfLines = 0
@@ -741,8 +741,8 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         addConstraintsNa(line: name)
         
         addition += 1
-
-    
+        
+        
     }
     
     func jumpTo(){
@@ -785,7 +785,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             self.Issuccess = false
             
         }
-
+        
     }
     
     func initable(){

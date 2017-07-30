@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lv2-bJ-41H">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mQe-1m-bpD">
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -214,7 +218,7 @@
         <!--Entrance View Controller-->
         <scene sceneID="fVI-df-gEK">
             <objects>
-                <viewController id="9aq-Kl-Gwn" customClass="entranceViewController" customModule="诵诗" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="entranceView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9aq-Kl-Gwn" customClass="entranceViewController" customModule="诵诗" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="93y-t4-lsq"/>
                         <viewControllerLayoutGuide type="bottom" id="y7O-DF-lvc"/>
@@ -591,10 +595,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xoP-v8-Ri7">
+<<<<<<< HEAD
                                 <rect key="frame" x="28" y="26" width="358" height="61"/>
+=======
+                                <rect key="frame" x="86" y="26" width="300" height="61"/>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhz-3r-01t">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="q2u-La-87D"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="TpldKhangXiDictDemo" family="TypeLand KhangXi Dict Demo" pointSize="64"/>
                                         <state key="normal" title="春">
                                             <color key="titleColor" red="0.13725490200000001" green="0.38431372549999998" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -604,13 +615,24 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="·" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dz-kP-mUl">
+<<<<<<< HEAD
                                         <rect key="frame" x="85" y="9" width="9.6666666666666714" height="43"/>
+=======
+                                        <rect key="frame" x="85" y="9" width="4.3333333333333428" height="43"/>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsT-84-lAF">
+<<<<<<< HEAD
                                         <rect key="frame" x="115.66666666666666" y="8.6666666666666643" width="32" height="44.000000000000007"/>
+=======
+                                        <rect key="frame" x="110.33333333333334" y="8.6666666666666643" width="32" height="44.000000000000007"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="R2q-TB-ZSz"/>
+                                        </constraints>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                         <fontDescription key="fontDescription" name="TpldKhangXiDictDemo" family="TypeLand KhangXi Dict Demo" pointSize="32"/>
                                         <state key="normal" title="夏">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -619,14 +641,27 @@
                                             <action selector="switchLevels:" destination="JRB-1g-ZIB" eventType="touchUpInside" id="wVO-rq-xr6"/>
                                         </connections>
                                     </button>
+<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="·" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQG-oV-NB4">
                                         <rect key="frame" x="168.66666666666666" y="9" width="9.6666666666666856" height="43"/>
+=======
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" text="·" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQG-oV-NB4">
+                                        <rect key="frame" x="163.33333333333337" y="9" width="9.6666666666666572" height="43"/>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsc-XG-9wR">
                                         <rect key="frame" x="199.33333333333331" y="6.6666666666666643" width="74.999999999999943" height="48.000000000000007"/>
+=======
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="246" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsc-XG-9wR">
+                                        <rect key="frame" x="194" y="6.6666666666666643" width="32" height="48.000000000000007"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="4hh-l1-thB"/>
+                                        </constraints>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                         <fontDescription key="fontDescription" name="TpldKhangXiDictDemo" family="TypeLand KhangXi Dict Demo" pointSize="36"/>
                                         <state key="normal" title="秋">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -636,13 +671,22 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="·" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVw-w1-Dyo">
+<<<<<<< HEAD
                                         <rect key="frame" x="295.33333333333326" y="9" width="9.6666666666666856" height="43"/>
+=======
+                                        <rect key="frame" x="247" y="9" width="0.0" height="43"/>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Kh-287">
                                         <rect key="frame" x="326" y="8.6666666666666643" width="32" height="44.000000000000007"/>
+=======
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Kh-287">
+                                        <rect key="frame" x="268" y="8.6666666666666643" width="32" height="44.000000000000007"/>
+>>>>>>> 8033fde60daf84cad2d05d684d98dcf2b165b014
                                         <fontDescription key="fontDescription" name="TpldKhangXiDictDemo" family="TypeLand KhangXi Dict Demo" pointSize="32"/>
                                         <state key="normal" title="冬">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -653,6 +697,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YpN-hR-lol"/>
                                     <constraint firstItem="gga-Kh-287" firstAttribute="leading" secondItem="qVw-w1-Dyo" secondAttribute="trailing" constant="21" id="jBi-JS-Elx"/>
                                 </constraints>
                             </stackView>
@@ -730,7 +775,6 @@
                             <constraint firstItem="g2X-tb-kth" firstAttribute="top" secondItem="xoP-v8-Ri7" secondAttribute="bottom" constant="-87" id="lHe-zf-m0r"/>
                             <constraint firstItem="xoP-v8-Ri7" firstAttribute="top" secondItem="hAI-uD-Ikr" secondAttribute="topMargin" constant="26" id="ld9-4f-9t2"/>
                             <constraint firstItem="mbW-oC-sc4" firstAttribute="bottom" secondItem="Ted-qz-7Ig" secondAttribute="bottom" id="mDH-Z3-60l"/>
-                            <constraint firstItem="xoP-v8-Ri7" firstAttribute="leading" secondItem="hAI-uD-Ikr" secondAttribute="leadingMargin" constant="8" id="qkb-aM-CwB"/>
                             <constraint firstAttribute="trailing" secondItem="g2X-tb-kth" secondAttribute="trailing" id="u7s-Ql-qnm"/>
                             <constraint firstAttribute="trailing" secondItem="5NW-ab-XHd" secondAttribute="trailing" id="unK-7h-vWb"/>
                             <constraint firstItem="JG9-jg-bDY" firstAttribute="leading" secondItem="hAI-uD-Ikr" secondAttribute="leadingMargin" constant="113" id="yXe-2Y-HOJ"/>
@@ -757,6 +801,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xo-Nm-of5" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-268" y="1219"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h7l-gE-96m">
+            <objects>
+                <viewController id="fum-Iv-ebN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sXX-kr-tFT"/>
+                        <viewControllerLayoutGuide type="bottom" id="L3m-lB-S3c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBi-cV-HOF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZj-hx-sVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="1218"/>
         </scene>
     </scenes>
     <resources>
