@@ -95,12 +95,12 @@ class loginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        textField.attributedPlaceholder = NSAttributedString(string: "", attributes: [ NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 78/255.0, green: 78/255.0, blue: 78/255.0, alpha: 0)])
+        textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!, attributes: [ NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 78/255.0, green: 78/255.0, blue: 78/255.0, alpha: 0)])
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        initTextField()
+        textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!, attributes: [ NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 78/255.0, green: 78/255.0, blue: 78/255.0, alpha: 1)])
     }
     
 }

@@ -57,6 +57,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     
     //诗句摆放位置
     static let width = UIScreen.main.bounds.width
+    static let height = UIScreen.main.bounds.height
     let positionX = [[(width/2) + 30, (width/2) - 30], [(width/2) + 50, width/2, (width/2) - 50], [(width/2) + 90, (width/2) + 30, (width/2) - 30, (width/2) - 90]]
     
     //诗歌label
@@ -79,6 +80,9 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     let checkButton = UIButton()
     
     var signOfSuccessDidAppear = false
+    
+    //拼诗令按钮矩阵
+    var buttonMatrix = [UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +126,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     }
     //初始化语音设置
     func initSpeech(){
+        
         speechRecognizer?.delegate = self
         
     }
@@ -148,7 +153,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             }
             
             for i in 3...6{
-                //读
+                //从数据库中读出诗句
                 if let temp = UnsafePointer(sqlite3_column_text(singleViewController.stmt, Int32(i))){
                     sentence = String.init(cString: temp)
                     if sentence.characters.count >= 2{
@@ -159,39 +164,108 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                 }
             }
             
-            for i in lines{
+            //if randomType() == 0 {
+            if true {
+                //拼诗令
                 
-                let line = UILabel()
-                line.font = UIFont(name: "FZQingKeBenYueSongS-R-GB", size: 28)
-                line.numberOfLines = 0
-                line.translatesAutoresizingMaskIntoConstraints = false
-                poemlabel.append(line)
-                line.textAlignment = .center
-                line.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 1)
-                self.view.addSubview(line)
-                if i != lines[blankNum]{
-                    line.text = i
-                } else{
-                    line.text = blankFrame
-                    blank = i
-                    line.isUserInteractionEnabled = true
-                    
-                    //点击空label弹出键盘
-                    let tapGr = UITapGestureRecognizer(target: self, action: #selector(keyboardAppear(tap:)))
-                    line.addGestureRecognizer(tapGr)
-                    
-                    //加入输入框
-                    self.view.addSubview(inputText)
-                    addConstraints(line: inputText)
-                    
-                    //加入读按钮
-                    initButton(positionX: positionX[sentenceCount - 2][sentenceNum])
-                    //加入检验按钮
-                    initCheckButton()
+                var buttonGroup = [UIButton]()
+                //初始化字按钮矩阵
+                switch sentenceCount {
+                case 2:
+                    if blankNum == 0 {
+                        //若选取第一句为所拼诗句
+                    } else{
+                        //若选取第二句为所拼诗句
+                    }
+                    break
+                case 3:
+                    switch blankNum {
+                    case 0:
+                        //若选取第一句为所拼诗句
+                        break
+                    case 1:
+                        //若选取第二句为所拼诗句
+                        //victimLine为0选择前句，为1选择后句
+                        let victimLine = Int(arc4random_uniform(1))
+                        if victimLine == 0{
+                            //选择前句
+                            
+                            
+                        } else{
+                            //选择后句
+                            
+                        }
+                        break
+                    default:
+                        //若选取最后一句为所拼诗句
+                        break
+                    }
+                    break
+                case 4:
+                    switch blankNum {
+                    case 0:
+                        //若选取第一句为所拼诗句
+                        break
+                    case 1...2:
+                        //若选取第二句为所拼诗句
+                        //victimLine为0选择前句，为1选择后句
+                        let victimLine = Int(arc4random_uniform(1))
+                        if victimLine == 0{
+                            //选择前句
+                            
+                            
+                        } else if victimLine == 1{
+                            //选择后句
+                            
+                        }
+                        break
+                    default:
+                        //选取最后一句作为所拼诗句
+                        break
+                    }
+                    break
+                default:
+                    print("error")
                 }
                 
-                addConstraints(line: line)
-                sentenceNum += 1
+            } else{
+                //吟赏令
+                
+                for i in lines{
+                    
+                    let line = UILabel()
+                    line.font = UIFont(name: "FZQingKeBenYueSongS-R-GB", size: 28)
+                    line.numberOfLines = 0
+                    line.translatesAutoresizingMaskIntoConstraints = false
+                    poemlabel.append(line)
+                    line.textAlignment = .center
+                    line.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 1)
+                    self.view.addSubview(line)
+                    if i != lines[blankNum]{
+                        line.text = i
+                    } else{
+                        line.text = blankFrame
+                        blank = i
+                        line.isUserInteractionEnabled = true
+                        
+                        //点击空label弹出键盘
+                        let tapGr = UITapGestureRecognizer(target: self, action: #selector(keyboardAppear(tap:)))
+                        line.addGestureRecognizer(tapGr)
+                        
+                        //加入输入框
+                        self.view.addSubview(inputText)
+                        addConstraints(line: inputText)
+                        
+                        //加入读按钮
+                        initButton(positionX: positionX[sentenceCount - 2][sentenceNum])
+                        //加入检验按钮
+                        initCheckButton()
+                    }
+                    
+                    addConstraints(line: line)
+                    sentenceNum += 1
+                    
+                }
                 
             }
             
@@ -234,6 +308,11 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         let id = arc4random_uniform(4)
         
         return Int(id) >= lineLimit ? (lineLimit - 1) : Int(id)
+    }
+    
+    //随机拼诗令（0）或吟赏令(1)
+    func randomType() -> Int{
+        return Int(arc4random_uniform(1))
     }
     
     //点击屏幕收起键盘
@@ -551,8 +630,6 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     func checkIfRight(){
         
         fillIn = inputText.text
-        //        fillIn = "心悦君兮君不知"
-        //        && poemlabel[blankNum].text != blankFrame
         if fillIn == blank  {
             checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
             poemlabel[blankNum].text = blank
@@ -595,7 +672,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                 }
                 
                 if signOfSuccessDidAppear{
-                    self.navigationController?.popViewController(animated: true)
+                    let _ = self.navigationController?.popViewController(animated: true)
                 } else{
                     
                     let signOfSuccess = UILabel()
@@ -767,7 +844,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                 }
             }
             
-            var dbstr = NSMutableString(string: self.blank!) as CFMutableString
+            let dbstr = NSMutableString(string: self.blank!) as CFMutableString
             if CFStringTransform(dbstr,nil, kCFStringTransformMandarinLatin, false) == true{
                 if CFStringTransform(dbstr,nil, kCFStringTransformStripDiacritics, false) == true{
                     //获取数据库答案的拼音
@@ -799,6 +876,72 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         readButton.isUserInteractionEnabled = true
     }
     
+    func groupButton(limit: Int, line: String) -> [UIButton]{
+        
+        var buttonGroup = [UIButton]()
+        
+        switch limit {
+        case 9:
+            //九宫格
+            for i in 0..<9 {
+                
+                var y = singleViewController.height / 2
+                y = y + CGFloat((i / 3 - 1) * 40)
+                y = y + CGFloat((i / 3 - 1) * 20)
+                
+                var x = singleViewController.width / 2
+                x = x + CGFloat((i % 3 - 1))*40 + CGFloat((i % 3 - 1)*20)
+                
+                let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
+                button.setImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                self.view.addSubview(button)
+                buttonGroup.append(button)
+            }
+            break
+        case 12:
+            //十二宫格
+            for i in 0..<12 {
+                
+                var y = singleViewController.height / 2
+                y = y + CGFloat((i / 4 - 2) * 40)
+                
+                var x = singleViewController.width / 2
+                x = x + CGFloat((i % 3 - 1))*40 + CGFloat((i % 3 - 1)*20)
+                
+                let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
+                button.setImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                self.view.addSubview(button)
+                buttonGroup.append(button)
+            }
+            break
+        case 16:
+            //十六宫格
+            for i in 0..<16{
+                
+                var y = singleViewController.height / 2
+                y = y + CGFloat((i / 4 - 2) * 40)
+                
+                var x = singleViewController.width / 2
+                x = x + CGFloat((i % 4 - 1))*40
+                
+                let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
+                button.setImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                self.view.addSubview(button)
+                buttonGroup.append(button)
+                
+            }
+            break
+        default:
+            print("button number error")
+            break
+        }
+        
+        return buttonGroup
+        
+    }
     
     
 }

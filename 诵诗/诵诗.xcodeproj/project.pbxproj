@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0409EEE91E854E7F00DB2596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409EEE81E854E7F00DB2596 /* AppDelegate.swift */; };
 		0409EEEB1E854E7F00DB2596 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409EEEA1E854E7F00DB2596 /* ViewController.swift */; };
-		0409EEEE1E854E7F00DB2596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0409EEEC1E854E7F00DB2596 /* Main.storyboard */; };
 		0409EEF31E854E7F00DB2596 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0409EEF11E854E7F00DB2596 /* LaunchScreen.storyboard */; };
 		0409EEFB1E854E9800DB2596 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409EEFA1E854E9800DB2596 /* LevelsViewController.swift */; };
 		0409EF2E1E854F6100DB2596 /* 冬.png in Resources */ = {isa = PBXBuildFile; fileRef = 0409EF111E854F6000DB2596 /* 冬.png */; };
@@ -76,6 +75,8 @@
 		181D1AF71EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181D1AF61EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf */; };
 		181D1AFC1EADB4A600D806FD /* 按诵印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 181D1AFA1EADB4A600D806FD /* 按诵印章.png */; };
 		181D1AFD1EADB4A600D806FD /* 诵印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 181D1AFB1EADB4A600D806FD /* 诵印章.png */; };
+		18241B011F2EEDED003F056E /* 拼诗按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 18241B001F2EEDED003F056E /* 拼诗按钮.png */; };
+		1835D4811F2E0A2000E32DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1835D47F1F2E0A2000E32DFC /* Main.storyboard */; };
 		18786E121EB200C100351C3C /* BGView1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18786E111EB200C100351C3C /* BGView1.png */; };
 		18786E141EB20D6400351C3C /* poemsentence.db in Resources */ = {isa = PBXBuildFile; fileRef = 18786E131EB20D6400351C3C /* poemsentence.db */; };
 		188AFBC21EB3954A00A4DD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBC11EB3954A00A4DD94 /* Assets.xcassets */; };
@@ -122,7 +123,6 @@
 		0409EEE51E854E7F00DB2596 /* 诵诗.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "诵诗.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0409EEE81E854E7F00DB2596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0409EEEA1E854E7F00DB2596 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0409EEED1E854E7F00DB2596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0409EEF21E854E7F00DB2596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0409EEF41E854E7F00DB2596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0409EEFA1E854E9800DB2596 /* LevelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +191,8 @@
 		181D1AFA1EADB4A600D806FD /* 按诵印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按诵印章.png"; sourceTree = "<group>"; };
 		181D1AFB1EADB4A600D806FD /* 诵印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "诵印章.png"; sourceTree = "<group>"; };
 		1821FBC71EAC8C24003478FF /* SQLiteBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQLiteBridge.h; path = ../SQLiteBridge.h; sourceTree = "<group>"; };
+		18241B001F2EEDED003F056E /* 拼诗按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拼诗按钮.png"; sourceTree = "<group>"; };
+		1835D4801F2E0A2000E32DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18786E111EB200C100351C3C /* BGView1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BGView1.png; sourceTree = "<group>"; };
 		18786E131EB20D6400351C3C /* poemsentence.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = poemsentence.db; sourceTree = "<group>"; };
 		188AFBC11EB3954A00A4DD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,10 +278,10 @@
 				0409EEFA1E854E9800DB2596 /* LevelsViewController.swift */,
 				04D1716A1F2DA29E0050CD92 /* secondView.swift */,
 				0409EEEA1E854E7F00DB2596 /* ViewController.swift */,
-				0409EEEC1E854E7F00DB2596 /* Main.storyboard */,
 				0477BFC41EA8941F009B7B25 /* explainViewController.swift */,
 				0409EF0F1E854F6000DB2596 /* source */,
 				0409EEF11E854E7F00DB2596 /* LaunchScreen.storyboard */,
+				1835D47F1F2E0A2000E32DFC /* Main.storyboard */,
 				0409EEF41E854E7F00DB2596 /* Info.plist */,
 				1821FBC71EAC8C24003478FF /* SQLiteBridge.h */,
 				04D171621F2B75B20050CD92 /* entranceViewController.swift */,
@@ -356,6 +358,7 @@
 		04B5127A1EA7122400E986A0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18241B001F2EEDED003F056E /* 拼诗按钮.png */,
 				189E55391F2CD51B00B6F4D6 /* 登录按钮.png */,
 				189E55381F2CD51B00B6F4D6 /* 注册按钮.png */,
 				189E55341F2CCF0900B6F4D6 /* 登录.png */,
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D171531F2B65850050CD92 /* 帘子左.png in Resources */,
+				18241B011F2EEDED003F056E /* 拼诗按钮.png in Resources */,
 				04D171571F2B65C80050CD92 /* 方正苏新诗柳楷繁体.ttf in Resources */,
 				188AFBFC1EB39AD500A4DD94 /* PBG18.png in Resources */,
 				1811E60E1EAF808D000080B6 /* 正确.png in Resources */,
@@ -483,6 +487,7 @@
 				0409EF361E854F6100DB2596 /* 寒露.png in Resources */,
 				04B2FF6F1E8917C200753E38 /* BG.png in Resources */,
 				181B0F0A1EAE19090034E12B /* 译文选中.png in Resources */,
+				1835D4811F2E0A2000E32DFC /* Main.storyboard in Resources */,
 				1811E6201EB0AD9B000080B6 /* 引导页2.png in Resources */,
 				0409EF331E854F6100DB2596 /* 大寒.png in Resources */,
 				188AFBC81EB3955D00A4DD94 /* icon2-58.png in Resources */,
@@ -525,7 +530,6 @@
 				0409EF431E854F6100DB2596 /* 立夏.png in Resources */,
 				188AFBED1EB39AD500A4DD94 /* PBG3.png in Resources */,
 				188AFBCB1EB3955D00A4DD94 /* icon2-120.png in Resources */,
-				0409EEEE1E854E7F00DB2596 /* Main.storyboard in Resources */,
 				18786E141EB20D6400351C3C /* poemsentence.db in Resources */,
 				181D1AF71EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf in Resources */,
 				0477BFD11EAC6BB0009B7B25 /* 赏析未选中.png in Resources */,
@@ -587,20 +591,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0409EEEC1E854E7F00DB2596 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0409EEED1E854E7F00DB2596 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0409EEF11E854E7F00DB2596 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0409EEF21E854E7F00DB2596 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1835D47F1F2E0A2000E32DFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1835D4801F2E0A2000E32DFC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -710,7 +714,7 @@
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = SQLiteBridge.h;
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -727,7 +731,7 @@
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = SQLiteBridge.h;
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
