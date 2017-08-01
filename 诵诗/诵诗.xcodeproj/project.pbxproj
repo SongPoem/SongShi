@@ -49,7 +49,6 @@
 		04B512721EA7004B00E986A0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B512711EA7004B00E986A0 /* libsqlite3.0.tbd */; };
 		04B512741EA7024900E986A0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B512731EA7024900E986A0 /* libsqlite3.tbd */; };
 		04D171531F2B65850050CD92 /* 帘子左.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D171521F2B65850050CD92 /* 帘子左.png */; };
-		04D171571F2B65C80050CD92 /* 方正苏新诗柳楷繁体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D171561F2B65C80050CD92 /* 方正苏新诗柳楷繁体.ttf */; };
 		04D171591F2B67CE0050CD92 /* 印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D171581F2B67CE0050CD92 /* 印章.png */; };
 		04D1715B1F2B691C0050CD92 /* 帘子右.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D1715A1F2B691C0050CD92 /* 帘子右.png */; };
 		04D1715D1F2B6A0E0050CD92 /* noPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 04D1715C1F2B6A0E0050CD92 /* noPoint.png */; };
@@ -72,11 +71,18 @@
 		181B0F021EAE16A90034E12B /* 全文选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 181B0F011EAE16A90034E12B /* 全文选中.png */; };
 		181B0F091EAE19090034E12B /* 译文未选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 181B0F071EAE19090034E12B /* 译文未选中.png */; };
 		181B0F0A1EAE19090034E12B /* 译文选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 181B0F081EAE19090034E12B /* 译文选中.png */; };
-		181D1AF71EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181D1AF61EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf */; };
 		181D1AFC1EADB4A600D806FD /* 按诵印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 181D1AFA1EADB4A600D806FD /* 按诵印章.png */; };
 		181D1AFD1EADB4A600D806FD /* 诵印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 181D1AFB1EADB4A600D806FD /* 诵印章.png */; };
 		18241B011F2EEDED003F056E /* 拼诗按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 18241B001F2EEDED003F056E /* 拼诗按钮.png */; };
 		1835D4811F2E0A2000E32DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1835D47F1F2E0A2000E32DFC /* Main.storyboard */; };
+		1837E4B31F2F5AC2002D8737 /* 按删印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837E4AF1F2F5AC2002D8737 /* 按删印章.png */; };
+		1837E4B41F2F5AC2002D8737 /* 按空印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837E4B01F2F5AC2002D8737 /* 按空印章.png */; };
+		1837E4B51F2F5AC2002D8737 /* 删除印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837E4B11F2F5AC2002D8737 /* 删除印章.png */; };
+		1837E4B61F2F5AC2002D8737 /* 清空印章.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837E4B21F2F5AC2002D8737 /* 清空印章.png */; };
+		1837E4B81F2F6A86002D8737 /* 检验2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1837E4B71F2F6A86002D8737 /* 检验2.png */; };
+		1837E5F51F30AD37002D8737 /* 方正清刻本悦宋简体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1837E5F41F30AD37002D8737 /* 方正清刻本悦宋简体.ttf */; };
+		1837E6C21F30ADAB002D8737 /* 方正苏新诗柳楷繁体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1837E6C01F30ADAB002D8737 /* 方正苏新诗柳楷繁体.ttf */; };
+		1837E6C31F30ADAB002D8737 /* 康熙字典體(Demo).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1837E6C11F30ADAB002D8737 /* 康熙字典體(Demo).ttf */; };
 		18786E121EB200C100351C3C /* BGView1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18786E111EB200C100351C3C /* BGView1.png */; };
 		18786E141EB20D6400351C3C /* poemsentence.db in Resources */ = {isa = PBXBuildFile; fileRef = 18786E131EB20D6400351C3C /* poemsentence.db */; };
 		188AFBC21EB3954A00A4DD94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBC11EB3954A00A4DD94 /* Assets.xcassets */; };
@@ -115,7 +121,6 @@
 		189E553B1F2CD51B00B6F4D6 /* 登录按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 189E55391F2CD51B00B6F4D6 /* 登录按钮.png */; };
 		189E55961F2CD75800B6F4D6 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E55951F2CD75800B6F4D6 /* loginViewController.swift */; };
 		189E55981F2CD84B00B6F4D6 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E55971F2CD84B00B6F4D6 /* registerViewController.swift */; };
-		189E55FF1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 189E55FE1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf */; };
 		95C11F3B1EAF6DF600F94B4A /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -164,7 +169,6 @@
 		04B512711EA7004B00E986A0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		04B512731EA7024900E986A0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		04D171521F2B65850050CD92 /* 帘子左.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "帘子左.png"; sourceTree = "<group>"; };
-		04D171561F2B65C80050CD92 /* 方正苏新诗柳楷繁体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正苏新诗柳楷繁体.ttf"; sourceTree = "<group>"; };
 		04D171581F2B67CE0050CD92 /* 印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "印章.png"; sourceTree = "<group>"; };
 		04D1715A1F2B691C0050CD92 /* 帘子右.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "帘子右.png"; sourceTree = "<group>"; };
 		04D1715C1F2B6A0E0050CD92 /* noPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noPoint.png; sourceTree = "<group>"; };
@@ -187,12 +191,19 @@
 		181B0F011EAE16A90034E12B /* 全文选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全文选中.png"; sourceTree = "<group>"; };
 		181B0F071EAE19090034E12B /* 译文未选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "译文未选中.png"; sourceTree = "<group>"; };
 		181B0F081EAE19090034E12B /* 译文选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "译文选中.png"; sourceTree = "<group>"; };
-		181D1AF61EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正清刻本悦宋简体.ttf"; sourceTree = "<group>"; };
 		181D1AFA1EADB4A600D806FD /* 按诵印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按诵印章.png"; sourceTree = "<group>"; };
 		181D1AFB1EADB4A600D806FD /* 诵印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "诵印章.png"; sourceTree = "<group>"; };
 		1821FBC71EAC8C24003478FF /* SQLiteBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SQLiteBridge.h; path = ../SQLiteBridge.h; sourceTree = "<group>"; };
 		18241B001F2EEDED003F056E /* 拼诗按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拼诗按钮.png"; sourceTree = "<group>"; };
 		1835D4801F2E0A2000E32DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1837E4AF1F2F5AC2002D8737 /* 按删印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按删印章.png"; sourceTree = "<group>"; };
+		1837E4B01F2F5AC2002D8737 /* 按空印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按空印章.png"; sourceTree = "<group>"; };
+		1837E4B11F2F5AC2002D8737 /* 删除印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除印章.png"; sourceTree = "<group>"; };
+		1837E4B21F2F5AC2002D8737 /* 清空印章.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "清空印章.png"; sourceTree = "<group>"; };
+		1837E4B71F2F6A86002D8737 /* 检验2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "检验2.png"; sourceTree = "<group>"; };
+		1837E5F41F30AD37002D8737 /* 方正清刻本悦宋简体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正清刻本悦宋简体.ttf"; sourceTree = "<group>"; };
+		1837E6C01F30ADAB002D8737 /* 方正苏新诗柳楷繁体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正苏新诗柳楷繁体.ttf"; sourceTree = "<group>"; };
+		1837E6C11F30ADAB002D8737 /* 康熙字典體(Demo).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "康熙字典體(Demo).ttf"; sourceTree = "<group>"; };
 		18786E111EB200C100351C3C /* BGView1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BGView1.png; sourceTree = "<group>"; };
 		18786E131EB20D6400351C3C /* poemsentence.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = poemsentence.db; sourceTree = "<group>"; };
 		188AFBC11EB3954A00A4DD94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,7 +242,6 @@
 		189E55391F2CD51B00B6F4D6 /* 登录按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录按钮.png"; sourceTree = "<group>"; };
 		189E55951F2CD75800B6F4D6 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = "诵诗/loginViewController.swift"; sourceTree = SOURCE_ROOT; };
 		189E55971F2CD84B00B6F4D6 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
-		189E55FE1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "康熙字典體(Demo).ttf"; sourceTree = "<group>"; };
 		95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,6 +302,8 @@
 		0409EF0F1E854F6000DB2596 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				1837E6C01F30ADAB002D8737 /* 方正苏新诗柳楷繁体.ttf */,
+				1837E6C11F30ADAB002D8737 /* 康熙字典體(Demo).ttf */,
 				04D171641F2C5AFB0050CD92 /* 向左.png */,
 				04D171651F2C5AFB0050CD92 /* 向右.png */,
 				04D1715E1F2B6A580050CD92 /* point.png */,
@@ -307,12 +319,10 @@
 				181B0F081EAE19090034E12B /* 译文选中.png */,
 				181B0F011EAE16A90034E12B /* 全文选中.png */,
 				181B0EFF1EAE13110034E12B /* 全文未选中.png */,
-				04D171561F2B65C80050CD92 /* 方正苏新诗柳楷繁体.ttf */,
 				0477BFCE1EAC6BB0009B7B25 /* 赏析选中.png */,
 				0477BFCF1EAC6BB0009B7B25 /* 赏析未选中.png */,
 				04B512261EA6609500E986A0 /* 二.png */,
 				04B512271EA6609500E986A0 /* 一.png */,
-				189E55FE1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf */,
 				04B2FF6E1E8917C200753E38 /* BG.png */,
 				0409EF111E854F6000DB2596 /* 冬.png */,
 				0409EF121E854F6000DB2596 /* 冬至.png */,
@@ -358,6 +368,12 @@
 		04B5127A1EA7122400E986A0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1837E5F41F30AD37002D8737 /* 方正清刻本悦宋简体.ttf */,
+				1837E4B71F2F6A86002D8737 /* 检验2.png */,
+				1837E4AF1F2F5AC2002D8737 /* 按删印章.png */,
+				1837E4B01F2F5AC2002D8737 /* 按空印章.png */,
+				1837E4B11F2F5AC2002D8737 /* 删除印章.png */,
+				1837E4B21F2F5AC2002D8737 /* 清空印章.png */,
 				18241B001F2EEDED003F056E /* 拼诗按钮.png */,
 				189E55391F2CD51B00B6F4D6 /* 登录按钮.png */,
 				189E55381F2CD51B00B6F4D6 /* 注册按钮.png */,
@@ -402,7 +418,6 @@
 				1811E60D1EAF808D000080B6 /* 检验.png */,
 				181D1AFA1EADB4A600D806FD /* 按诵印章.png */,
 				181D1AFB1EADB4A600D806FD /* 诵印章.png */,
-				181D1AF61EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -439,7 +454,6 @@
 				TargetAttributes = {
 					0409EEE41E854E7F00DB2596 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2XYAGB2947;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -469,7 +483,6 @@
 			files = (
 				04D171531F2B65850050CD92 /* 帘子左.png in Resources */,
 				18241B011F2EEDED003F056E /* 拼诗按钮.png in Resources */,
-				04D171571F2B65C80050CD92 /* 方正苏新诗柳楷繁体.ttf in Resources */,
 				188AFBFC1EB39AD500A4DD94 /* PBG18.png in Resources */,
 				1811E60E1EAF808D000080B6 /* 正确.png in Resources */,
 				188AFBEB1EB39AD500A4DD94 /* PBG1.png in Resources */,
@@ -477,6 +490,7 @@
 				188AFBEE1EB39AD500A4DD94 /* PBG4.png in Resources */,
 				188AFBF01EB39AD500A4DD94 /* PBG6.png in Resources */,
 				0409EF3D1E854F6100DB2596 /* 春分.png in Resources */,
+				1837E4B41F2F5AC2002D8737 /* 按空印章.png in Resources */,
 				0409EF491E854F6100DB2596 /* 霜降.png in Resources */,
 				188AFBD41EB3976400A4DD94 /* 启动页5.5.png in Resources */,
 				188AFBD21EB3976400A4DD94 /* 启动页4.7.png in Resources */,
@@ -506,13 +520,13 @@
 				188AFBF21EB39AD500A4DD94 /* PBG8.png in Resources */,
 				0409EF3E1E854F6100DB2596 /* 清明.png in Resources */,
 				188AFBF31EB39AD500A4DD94 /* PBG9.png in Resources */,
-				189E55FF1F2DAB7900B6F4D6 /* 康熙字典體(Demo).ttf in Resources */,
 				189E553A1F2CD51B00B6F4D6 /* 注册按钮.png in Resources */,
 				04B512281EA6609500E986A0 /* 二.png in Resources */,
 				0409EF381E854F6100DB2596 /* 小暑.png in Resources */,
 				188AFBF91EB39AD500A4DD94 /* PBG15.png in Resources */,
 				0409EF441E854F6100DB2596 /* 立春.png in Resources */,
 				1811E61D1EB0AD9B000080B6 /* 引导页4.png in Resources */,
+				1837E6C21F30ADAB002D8737 /* 方正苏新诗柳楷繁体.ttf in Resources */,
 				04B512291EA6609500E986A0 /* 一.png in Resources */,
 				188AFBF11EB39AD500A4DD94 /* PBG7.png in Resources */,
 				181B0F091EAE19090034E12B /* 译文未选中.png in Resources */,
@@ -520,18 +534,21 @@
 				04D171591F2B67CE0050CD92 /* 印章.png in Resources */,
 				1811E61F1EB0AD9B000080B6 /* 引导页1.png in Resources */,
 				0409EF3B1E854F6100DB2596 /* 惊蛰.png in Resources */,
+				1837E4B81F2F6A86002D8737 /* 检验2.png in Resources */,
 				0409EF371E854F6100DB2596 /* 小寒.png in Resources */,
 				04D1715D1F2B6A0E0050CD92 /* noPoint.png in Resources */,
 				188AFBF61EB39AD500A4DD94 /* PBG12.png in Resources */,
 				04D171671F2C5AFC0050CD92 /* 向右.png in Resources */,
+				1837E4B61F2F5AC2002D8737 /* 清空印章.png in Resources */,
 				188AFBF41EB39AD500A4DD94 /* PBG10.png in Resources */,
 				04D1715F1F2B6A580050CD92 /* point.png in Resources */,
+				1837E5F51F30AD37002D8737 /* 方正清刻本悦宋简体.ttf in Resources */,
+				1837E4B51F2F5AC2002D8737 /* 删除印章.png in Resources */,
 				1811E6101EAF808D000080B6 /* 检验.png in Resources */,
 				0409EF431E854F6100DB2596 /* 立夏.png in Resources */,
 				188AFBED1EB39AD500A4DD94 /* PBG3.png in Resources */,
 				188AFBCB1EB3955D00A4DD94 /* icon2-120.png in Resources */,
 				18786E141EB20D6400351C3C /* poemsentence.db in Resources */,
-				181D1AF71EAD9E4400D806FD /* 方正清刻本悦宋简体.ttf in Resources */,
 				0477BFD11EAC6BB0009B7B25 /* 赏析未选中.png in Resources */,
 				0409EF391E854F6100DB2596 /* 小满.png in Resources */,
 				0409EF421E854F6100DB2596 /* 立冬.png in Resources */,
@@ -542,6 +559,7 @@
 				0409EF451E854F6100DB2596 /* 立秋.png in Resources */,
 				1811E61E1EB0AD9B000080B6 /* 引导页3.png in Resources */,
 				188AFBD11EB3976400A4DD94 /* 启动页retina4.png in Resources */,
+				1837E6C31F30ADAB002D8737 /* 康熙字典體(Demo).ttf in Resources */,
 				0409EF3A1E854F6100DB2596 /* 小雪.png in Resources */,
 				181B0F001EAE13110034E12B /* 全文未选中.png in Resources */,
 				1811E6141EAF856F000080B6 /* 返回主界面未选中.png in Resources */,
@@ -550,6 +568,7 @@
 				0409EF411E854F6100DB2596 /* 秋分.png in Resources */,
 				0409EF2E1E854F6100DB2596 /* 冬.png in Resources */,
 				04D1715B1F2B691C0050CD92 /* 帘子右.png in Resources */,
+				1837E4B31F2F5AC2002D8737 /* 按删印章.png in Resources */,
 				0477BFD01EAC6BB0009B7B25 /* 赏析选中.png in Resources */,
 				04D171661F2C5AFB0050CD92 /* 向左.png in Resources */,
 				0409EF341E854F6100DB2596 /* 大暑.png in Resources */,
@@ -705,11 +724,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2XYAGB2947;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "诵诗/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.cocoagame.--";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tac.songshi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = SQLiteBridge.h;
@@ -722,11 +741,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2XYAGB2947;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "诵诗/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.cocoagame.--";
+				PRODUCT_BUNDLE_IDENTIFIER = net.tac.songshi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = SQLiteBridge.h;

@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "singleViewController.switchToNextPoem(slide : UISwipeGestureRecognizer) -&gt; ():singleViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "singleViewController.initLabel() -&gt; ():singleViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "blankNum">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

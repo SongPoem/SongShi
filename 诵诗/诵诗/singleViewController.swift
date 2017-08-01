@@ -64,11 +64,10 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     var poemlabel = [UILabel]()
     
     //填空诗句符号
-    let blankFrame = "︻\r\r\r\r\r\r\r︼"
-    
+    var blankFrame = "︻\r\r\r\r\r\r\r︼"
     
     //诵诗按钮
-    let readButton = UIButton(type: UIButtonType.custom)
+    var readButton = UIButton()
     
     //是否正在录音
     var ifClickRecord = true
@@ -77,12 +76,29 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     var levelNum: Int = 1
     
     //检验按钮
-    let checkButton = UIButton()
+    var checkButton = UIButton()
     
     var signOfSuccessDidAppear = false
     
     //拼诗令按钮矩阵
     var buttonMatrix = [UIButton]()
+    
+    //拼诗令清空按钮
+    var clearButton = UIButton()
+    //拼诗令删除按钮
+    var delButton = UIButton()
+    
+    //拼诗令填空
+    var inputLabel = UILabel()
+    
+    //拼诗令按钮点击数组
+    var clickButTagArr = [Int]()
+    
+    //当前题型（0为拼诗令，1为吟赏令）
+    var type = Int()
+    
+    //诗句集
+    var lines = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,9 +151,8 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         //step
         operateQuery()
         if (sqlite3_step(singleViewController.stmt) == SQLITE_ROW) {
-            
-            //诗句数组
-            var lines = [String]()
+            //清空诗句集
+            lines.removeAll()
             //诗句数量
             sentenceCount = Int(sqlite3_column_int(singleViewController.stmt, 7))
             
@@ -164,24 +179,28 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                 }
             }
             
-            //if randomType() == 0 {
-            if true {
+            type = randomType()
+            if type == 0 {
                 //拼诗令
-                
-                var buttonGroup = [UIButton]()
                 //初始化字按钮矩阵
                 switch sentenceCount {
                 case 2:
                     if blankNum == 0 {
                         //若选取第一句为所拼诗句
+                        let reorderLine = secondView.reOrderSentence(s1: lines[0], s2: lines[1])
+                        buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                     } else{
                         //若选取第二句为所拼诗句
+                        let reorderLine = secondView.reOrderSentence(s1: lines[1], s2: lines[0])
+                        buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                     }
                     break
                 case 3:
                     switch blankNum {
                     case 0:
                         //若选取第一句为所拼诗句
+                        let reorderLine = secondView.reOrderSentence(s1: lines[0], s2: lines[1])
+                        buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         break
                     case 1:
                         //若选取第二句为所拼诗句
@@ -189,15 +208,18 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                         let victimLine = Int(arc4random_uniform(1))
                         if victimLine == 0{
                             //选择前句
-                            
-                            
+                            let reorderLine = secondView.reOrderSentence(s1: lines[1], s2: lines[0])
+                            buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         } else{
                             //选择后句
-                            
+                            let reorderLine = secondView.reOrderSentence(s1: lines[1], s2: lines[2])
+                            buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         }
                         break
                     default:
                         //若选取最后一句为所拼诗句
+                        let reorderLine = secondView.reOrderSentence(s1: lines[2], s2: lines[1])
+                        buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         break
                     }
                     break
@@ -205,6 +227,8 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                     switch blankNum {
                     case 0:
                         //若选取第一句为所拼诗句
+                        let reorderLine = secondView.reOrderSentence(s1: lines[0], s2: lines[1])
+                        buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         break
                     case 1...2:
                         //若选取第二句为所拼诗句
@@ -212,15 +236,19 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                         let victimLine = Int(arc4random_uniform(1))
                         if victimLine == 0{
                             //选择前句
-                            
+                            let reorderLine = secondView.reOrderSentence(s1: lines[blankNum], s2: lines[blankNum-1])
+                            buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                             
                         } else if victimLine == 1{
                             //选择后句
-                            
+                            let reorderLine = secondView.reOrderSentence(s1: lines[blankNum], s2: lines[blankNum+1])
+                            buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         }
                         break
                     default:
                         //选取最后一句作为所拼诗句
+                        let reorderLine = secondView.reOrderSentence(s1: lines[3], s2: lines[2])
+                        buttonMatrix = groupButton(limit: reorderLine.0, line: reorderLine.1)
                         break
                     }
                     break
@@ -228,6 +256,9 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                     print("error")
                 }
                 
+                initButton()
+                initInputLabel()
+                blank = lines[blankNum]
             } else{
                 //吟赏令
                 
@@ -290,7 +321,6 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     }
     func addConstraintsNa(line: UIView){
         
-        
         //添加约束
         
         line.superview!.addConstraint(NSLayoutConstraint(item: line, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: 160))
@@ -312,7 +342,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     
     //随机拼诗令（0）或吟赏令(1)
     func randomType() -> Int{
-        return Int(arc4random_uniform(1))
+        return Int(arc4random_uniform(2))
     }
     
     //点击屏幕收起键盘
@@ -321,26 +351,42 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
             return
         }
         
-        
-        
-        inputText.resignFirstResponder()
-        inputText.isHidden = true
-        if(inputText.text == String()){
-            poemlabel[blankNum].text = blankFrame
-        } else{
-            poemlabel[blankNum].text = inputText.text
+        if type == 1{
+            
+            inputText.resignFirstResponder()
+            inputText.isHidden = true
+            if(inputText.text == String()){
+                poemlabel[blankNum].text = blankFrame
+            } else{
+                poemlabel[blankNum].text = inputText.text
+            }
+            readButton.isUserInteractionEnabled = true
+            
         }
-        readButton.isUserInteractionEnabled = true
+        
     }
     
     func initInputText(){
         inputText.translatesAutoresizingMaskIntoConstraints = false
         inputText.font = UIFont(name: "FZQingKeBenYueSongS-R-GB", size: 28)
         inputText.textAlignment = .center
-        inputText.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 1)
+        inputText.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 0)
         inputText.delegate = self
         inputText.returnKeyType = UIReturnKeyType.done
         inputText.isHidden = true
+        inputText.tintColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 0)
+        //监听输入变化
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange(notification:)), name: .UITextFieldTextDidChange, object: inputText)
+    }
+    
+    @objc private func textFieldDidChange(notification: NSNotification){
+        let textField = notification.object as! UITextField
+        
+        if textField.text != blankFrame{
+            
+            poemlabel[blankNum].text = textField.text
+        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -356,7 +402,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         }
         textField.isHidden = true
         readButton.isUserInteractionEnabled = true
-        return true
+        return true  
     }
     
     //点击label弹出键盘
@@ -368,8 +414,8 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         checkButton.setBackgroundImage(UIImage(named: "检验.png"), for: UIControlState.normal)
     }
     
+    //吟赏令button init
     func initButton(positionX: CGFloat){
-        
         self.view.addSubview(readButton)
         
         readButton.translatesAutoresizingMaskIntoConstraints = false
@@ -385,6 +431,69 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         readButton.setBackgroundImage(UIImage(named: "诵印章.png"), for: UIControlState.normal)
         
         readButton.addTarget(self, action: #selector(record), for: .touchUpInside)
+    }
+    
+    //拼诗令button init
+    func initButton(){
+        
+        switch buttonMatrix.count {
+        case 0...9:
+            let clearBut = UIButton(frame: CGRect(x: 5+buttonMatrix[6].frame.origin.x, y: buttonMatrix[6].frame.origin.y + buttonMatrix[6].frame.height+5, width: 40, height: 40))
+            let delBut = UIButton(frame: CGRect(x: 5+buttonMatrix[7].frame.origin.x, y: buttonMatrix[7].frame.origin.y + buttonMatrix[7].frame.height+5, width: 40, height: 40))
+            let checkBut = UIButton(frame: CGRect(x: 5+buttonMatrix[8].frame.origin.x, y: buttonMatrix[8].frame.origin.y + buttonMatrix[8].frame.height+5, width: 40, height: 40))
+            clearBut.setBackgroundImage(UIImage(named: "清空印章.png"), for: .normal)
+            delBut.setBackgroundImage(UIImage(named: "删除印章.png"), for: .normal)
+            checkBut.setBackgroundImage(UIImage(named: "检验2.png"), for: .normal)
+            clearBut.addTarget(self, action: #selector(clearInputLabel), for: .touchUpInside)
+            delBut.addTarget(self, action: #selector(delWord), for: .touchUpInside)
+            checkBut.addTarget(self, action: #selector(checkIfRight), for: .touchUpInside)
+            clearButton = clearBut
+            delButton = delBut
+            checkButton = checkBut
+            self.view.addSubview(clearButton)
+            self.view.addSubview(delButton)
+            self.view.addSubview(checkButton)
+            break
+        case 10...12:
+            let clearBut = UIButton(frame: CGRect(x: 5+buttonMatrix[9].frame.origin.x, y: buttonMatrix[9].frame.origin.y + buttonMatrix[9].frame.height+5, width: 40, height: 40))
+            let delBut = UIButton(frame: CGRect(x: 5+buttonMatrix[10].frame.origin.x, y: buttonMatrix[10].frame.origin.y + buttonMatrix[10].frame.height+5, width: 40, height: 40))
+            let checkBut = UIButton(frame: CGRect(x: 5+buttonMatrix[11].frame.origin.x, y: buttonMatrix[11].frame.origin.y + buttonMatrix[11].frame.height+5, width: 40, height: 40))
+            clearBut.setBackgroundImage(UIImage(named: "清空印章.png"), for: .normal)
+            delBut.setBackgroundImage(UIImage(named: "删除印章.png"), for: .normal)
+            checkBut.setBackgroundImage(UIImage(named: "检验2.png"), for: .normal)
+            clearBut.addTarget(self, action: #selector(clearInputLabel), for: .touchUpInside)
+            delBut.addTarget(self, action: #selector(delWord), for: .touchUpInside)
+            checkBut.addTarget(self, action: #selector(checkIfRight), for: .touchUpInside)
+            clearButton = clearBut
+            delButton = delBut
+            checkButton = checkBut
+            self.view.addSubview(clearButton)
+            self.view.addSubview(delButton)
+            self.view.addSubview(checkButton)
+            break
+        case 13...16:
+            let clearBut = UIButton(frame: CGRect(x: 5+buttonMatrix[12].frame.origin.x, y: buttonMatrix[12].frame.origin.y + buttonMatrix[12].frame.height+5, width: 40, height: 40))
+            let delBut = UIButton(frame: CGRect(x: 5+buttonMatrix[13].frame.origin.x, y: buttonMatrix[13].frame.origin.y + buttonMatrix[13].frame.height+5, width: 40, height: 40))
+            let checkBut = UIButton(frame: CGRect(x: 5+buttonMatrix[14].frame.origin.x, y: buttonMatrix[14].frame.origin.y + buttonMatrix[14].frame.height+5, width: 40, height: 40))
+            clearBut.setBackgroundImage(UIImage(named: "清空印章.png"), for: .normal)
+            delBut.setBackgroundImage(UIImage(named: "删除印章.png"), for: .normal)
+            checkBut.setBackgroundImage(UIImage(named: "检验2.png"), for: .normal)
+            clearBut.addTarget(self, action: #selector(clearInputLabel), for: .touchUpInside)
+            delBut.addTarget(self, action: #selector(delWord), for: .touchUpInside)
+            checkBut.addTarget(self, action: #selector(checkIfRight), for: .touchUpInside)
+            clearButton = clearBut
+            delButton = delBut
+            checkButton = checkBut
+            self.view.addSubview(clearButton)
+            self.view.addSubview(delButton)
+            self.view.addSubview(checkButton)
+            break
+        default:
+            print("拼诗令button init error")
+            break
+        }
+        
+        
     }
     
     //readButton点击事件
@@ -604,7 +713,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         
     }
     
-    
+    //吟赏令“辨”初始化
     func initCheckButton(){
         self.view.addSubview(checkButton)
         
@@ -629,43 +738,80 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     //比较填入诗句是否正确
     func checkIfRight(){
         
-        fillIn = inputText.text
-        if fillIn == blank  {
-            checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
-            poemlabel[blankNum].text = blank
-            poemname()
-            return
+        //若为吟赏令
+        if type == 1 {
             
+            fillIn = inputText.text
+            if fillIn == blank  {
+                checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
+                poemlabel[blankNum].text = blank
+                poemname()
+                return
+                
+                
+            } else if Issuccess{
+                
+                poemlabel[blankNum].text = blank
+                poemname()
+                checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
+                
+                return
+                
+                
+            } else if inputText.text == nil{
+                return
+            } else{
+                checkButton.setBackgroundImage(UIImage(named: "错误.png"), for: UIControlState.normal)
+                return
+            }
             
-        } else if Issuccess{
+        } else {
+            //若为拼诗令
+            if inputLabel.text == blank {
+                //答案正确
+                checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
+                //展现诗句
+                for i in lines{
+                    
+                    let line = UILabel()
+                    line.font = UIFont(name: "FZQingKeBenYueSongS-R-GB", size: 28)
+                    line.numberOfLines = 0
+                    line.translatesAutoresizingMaskIntoConstraints = false
+                    poemlabel.append(line)
+                    line.textAlignment = .center
+                    line.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 1)
+                    self.view.addSubview(line)
+                    line.text = i
+                    addConstraints(line: line)
+                    sentenceNum += 1
+                    
+                }
+                //展现诗名
+                poemname()
+                inputLabel.isHidden = true
+            } else {
+                //答案错误
+                checkButton.setBackgroundImage(UIImage(named: "错误.png"), for: UIControlState.normal)
+            }
             
-            poemlabel[blankNum].text = blank
-            poemname()
-            checkButton.setBackgroundImage(UIImage(named: "正确.png"), for: UIControlState.normal)
-            
-            return
-            
-            
-        } else if inputText.text == nil{
-            return
-        } else{
-            checkButton.setBackgroundImage(UIImage(named: "错误.png"), for: UIControlState.normal)
-            return
         }
-        
-        
         
     }
     
     //切换到下一题或者下一关
     func switchToNextPoem(slide: UISwipeGestureRecognizer){
         
-        if slide.direction == UISwipeGestureRecognizerDirection.left && poemlabel[blankNum].text == blank {
+        if poemlabel[blankNum].text == blank || inputLabel.text == blank {
             if(levelNum % 10 == 0||addition == 9){
                 //                出现当前关卡名字，闯关成功界面，没有其他按钮 只能返回关卡界面
                 
-                readButton.removeFromSuperview()
-                inputText.removeFromSuperview()
+                if type == 1{
+                    readButton.removeFromSuperview()
+                    inputText.removeFromSuperview()
+                } else {
+                    clearButton.removeFromSuperview()
+                    delButton.removeFromSuperview()
+                }
                 checkButton.removeFromSuperview()
                 for i in poemlabel{
                     i.removeFromSuperview()
@@ -709,6 +855,10 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
                     i.removeFromSuperview()
                 }
                 poemlabel.removeAll(keepingCapacity: false)
+                
+                //拼诗令初始化
+                clearButton.removeFromSuperview()
+                delButton.removeFromSuperview()
                 
                 initLabel()
                 initable()
@@ -776,20 +926,26 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     
     //出题名
     func poemname(){
-        readButton.isUserInteractionEnabled = false
-        checkButton.isUserInteractionEnabled = false
-        inputText.isUserInteractionEnabled = false
-        readButton.adjustsImageWhenDisabled=false
-        checkButton.adjustsImageWhenDisabled=false
-        poemlabel[blankNum].isUserInteractionEnabled = false
         
-        //readButton.isEnabled = false
-        //checkButton.isEnabled = false
-        //        inputText.isEnabled = false
-        
-        
-        //poemlabel[blankNum].isUserInteractionEnabled = false
-        //        poemlabel[blankNum].isEnabled = false
+        if type == 1{
+            
+            readButton.isUserInteractionEnabled = false
+            inputText.isUserInteractionEnabled = false
+            readButton.adjustsImageWhenDisabled=false
+            checkButton.adjustsImageWhenDisabled=false
+            checkButton.isUserInteractionEnabled = false
+            poemlabel[blankNum].isUserInteractionEnabled = false
+            
+        } else {
+            
+            clearButton.isUserInteractionEnabled = false
+            delButton.isUserInteractionEnabled = false
+            checkButton.isUserInteractionEnabled = false
+            for but in buttonMatrix {
+                but.removeFromSuperview()
+            }
+            
+        }
         
         
         let level = Int(sqlite3_column_int(singleViewController.stmt, 0)) + 1
@@ -830,7 +986,7 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     
     func readcheck(){
         if ((self.userpoem != nil)&&(self.blank != nil)){
-            var userstr = NSMutableString(string: self.userpoem!) as CFMutableString
+            let userstr = NSMutableString(string: self.userpoem!) as CFMutableString
             
             var userpinyin: String?
             var dbpinyin: String?
@@ -866,14 +1022,18 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     }
     
     func initable(){
-        inputText.isUserInteractionEnabled = true
-        inputText.isEnabled = true
-        poemlabel[blankNum].isUserInteractionEnabled = true
-        checkButton.isUserInteractionEnabled = true
-        checkButton.isEnabled = true
-        poemlabel[blankNum].isEnabled = true
-        readButton.isEnabled=true
-        readButton.isUserInteractionEnabled = true
+        if type == 1{
+            
+            inputText.isUserInteractionEnabled = true
+            inputText.isEnabled = true
+            poemlabel[blankNum].isUserInteractionEnabled = true
+            checkButton.isUserInteractionEnabled = true
+            checkButton.isEnabled = true
+            poemlabel[blankNum].isEnabled = true
+            readButton.isEnabled=true
+            readButton.isUserInteractionEnabled = true
+            
+        }
     }
     
     func groupButton(limit: Int, line: String) -> [UIButton]{
@@ -881,56 +1041,146 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         var buttonGroup = [UIButton]()
         
         switch limit {
-        case 9:
+        case 0...9:
             //九宫格
-            for i in 0..<9 {
+            for i in 0..<limit {
                 
-                var y = singleViewController.height / 2
-                y = y + CGFloat((i / 3 - 1) * 40)
-                y = y + CGFloat((i / 3 - 1) * 20)
+                let factorxOf25 = i % 3 > 1 ? 1 : -1
+                let factorxOf50 = i % 3 > 0 ? 0 : -1
+                
+                let factoryOf50 = i / 3 > 0 ? 0 : -1
+                let factoryOf25 = i / 3 > 1 ? 1 : -1
+                
+                var y = singleViewController.height / 2 + 150
+                y = y + CGFloat(factoryOf50*40) + CGFloat(factoryOf25 * 20)
                 
                 var x = singleViewController.width / 2
-                x = x + CGFloat((i % 3 - 1))*40 + CGFloat((i % 3 - 1)*20)
+                x = x + CGFloat(factorxOf50*40) + CGFloat(factorxOf25 * 20)
                 
                 let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
-                button.setImage(UIImage(named: "拼诗按钮.png"), for: .normal)
-                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                button.setBackgroundImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                button.setTitle(String(line[line.characters.index(line.startIndex, offsetBy: i)]), for: .normal)
+                button.setTitleColor(UIColor.init(colorLiteralRed: 31/255.0, green: 89/255.0, blue: 107/255.0, alpha: 1), for: .normal)
+                button.titleLabel?.font = UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 26)
+                //                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                button.tag = i
+                button.addTarget(self, action: #selector(wordButClick(sender:)), for: .touchUpInside)
                 self.view.addSubview(button)
                 buttonGroup.append(button)
             }
+            //补全
+            if limit < 9 {
+                
+                for i in limit..<9{
+                    
+                    let factorxOf25 = i % 3 > 1 ? 1 : -1
+                    let factorxOf50 = i % 3 > 0 ? 0 : -1
+                    
+                    let factoryOf50 = i / 3 > 0 ? 0 : -1
+                    let factoryOf25 = i / 3 > 1 ? 1 : -1
+                    
+                    var y = singleViewController.height / 2 + 150
+                    y = y + CGFloat(factoryOf50*40) + CGFloat(factoryOf25 * 20)
+                    
+                    var x = singleViewController.width / 2
+                    x = x + CGFloat(factorxOf50*40) + CGFloat(factorxOf25 * 20)
+                    
+                    let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
+                    button.setBackgroundImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                    button.tag = i
+                    self.view.addSubview(button)
+                    buttonGroup.append(button)
+                    
+                }
+                
+            }
             break
-        case 12:
+        case 10...12:
             //十二宫格
-            for i in 0..<12 {
+            for i in 0..<limit {
                 
-                var y = singleViewController.height / 2
-                y = y + CGFloat((i / 4 - 2) * 40)
+                let factorOf25 = i % 3 > 1 ? 1 : -1
+                let factorOf50 = i % 3 > 0 ? 0 : -1
+                
+                var y = singleViewController.height / 2 + 150
+                y = y + CGFloat((i / 3 - 2) * 40)
                 
                 var x = singleViewController.width / 2
-                x = x + CGFloat((i % 3 - 1))*40 + CGFloat((i % 3 - 1)*20)
+                x = x + CGFloat(factorOf50*40) + CGFloat(factorOf25 * 20)
                 
                 let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
-                button.setImage(UIImage(named: "拼诗按钮.png"), for: .normal)
-                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                button.setBackgroundImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                button.setTitle(String(line[line.characters.index(line.startIndex, offsetBy: i)]), for: .normal)
+                button.setTitleColor(UIColor.init(colorLiteralRed: 31/255.0, green: 89/255.0, blue: 107/255.0, alpha: 1), for: .normal)
+                button.titleLabel?.font = UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 26)
+                button.addTarget(self, action: #selector(wordButClick(sender:)), for: .touchUpInside)
+                button.tag = i
                 self.view.addSubview(button)
                 buttonGroup.append(button)
             }
-            break
-        case 16:
-            //十六宫格
-            for i in 0..<16{
+            //补全
+            if limit < 12 {
                 
-                var y = singleViewController.height / 2
+                for i in limit..<12{
+                    
+                    let factorOf25 = i % 3 > 1 ? 1 : -1
+                    let factorOf50 = i % 3 > 0 ? 0 : -1
+                    
+                    var y = singleViewController.height / 2 + 150
+                    y = y + CGFloat((i / 3 - 2) * 40)
+                    
+                    var x = singleViewController.width / 2
+                    x = x + CGFloat(factorOf50*40) + CGFloat(factorOf25 * 20)
+                    
+                    let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
+                    button.setBackgroundImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                    button.tag = i
+                    self.view.addSubview(button)
+                    buttonGroup.append(button)
+                    
+                }
+                
+            }
+            break
+        case 13...16:
+            //十六宫格
+            for i in 0..<limit{
+                
+                var y = singleViewController.height / 2 + 150
                 y = y + CGFloat((i / 4 - 2) * 40)
                 
                 var x = singleViewController.width / 2
-                x = x + CGFloat((i % 4 - 1))*40
+                x = x + CGFloat((i % 4 - 2))*40
                 
                 let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
-                button.setImage(UIImage(named: "拼诗按钮.png"), for: .normal)
-                button.setAttributedTitle(NSAttributedString(string: String(line[line.characters.index(line.startIndex, offsetBy: i)]), attributes: [ NSFontAttributeName: UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 28.0)!,NSForegroundColorAttributeName: UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)]), for: .normal)
+                button.setBackgroundImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                button.setTitle(String(line[line.characters.index(line.startIndex, offsetBy: i)]), for: .normal)
+                button.setTitleColor(UIColor.init(colorLiteralRed: 31/255.0, green: 89/255.0, blue: 107/255.0, alpha: 1), for: .normal)
+                button.titleLabel?.font = UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 26)
+                button.addTarget(self, action: #selector(wordButClick(sender:)), for: .touchUpInside)
+                button.tag = i
                 self.view.addSubview(button)
                 buttonGroup.append(button)
+                
+            }
+            //补全
+            if limit < 16 {
+                
+                for i in limit..<16{
+                    
+                    var y = singleViewController.height / 2 + 150
+                    y = y + CGFloat((i / 4 - 2) * 40)
+                    
+                    var x = singleViewController.width / 2
+                    x = x + CGFloat((i % 4 - 2))*40
+                    
+                    let button = UIButton(frame: CGRect(x: x, y: y, width: 40, height: 40))
+                    button.setBackgroundImage(UIImage(named: "拼诗按钮.png"), for: .normal)
+                    button.tag = i
+                    self.view.addSubview(button)
+                    buttonGroup.append(button)
+                    
+                }
                 
             }
             break
@@ -941,6 +1191,100 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         
         return buttonGroup
         
+    }
+    
+    //初始化拼诗令填空label
+    func initInputLabel(){
+        
+        switch buttonMatrix.count {
+        case 0...9:
+            let inputLab = UILabel(frame: CGRect(x: 7.5+buttonMatrix[1].frame.origin.x, y: 80, width: 35, height: 400))
+            inputLab.text = blankFrame
+            inputLab.font = UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 26.0)
+            inputLab.textColor = UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)
+            inputLab.numberOfLines = 0
+            inputLabel = inputLab
+            self.view.addSubview(inputLabel)
+            break
+        case 10...12:
+            let inputLab = UILabel(frame: CGRect(x: 7.5+buttonMatrix[1].frame.origin.x, y: 80, width: 35, height: 400))
+            inputLab.text = blankFrame
+            inputLab.font = UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 26.0)
+            inputLab.textColor = UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)
+            inputLab.numberOfLines = 0
+            inputLabel = inputLab
+            self.view.addSubview(inputLabel)
+            break
+        case 13...16:
+            let inputLab = UILabel(frame: CGRect(x: 7.5+buttonMatrix[1].center.x, y: 80, width: 35, height: 400))
+            inputLab.text = blankFrame
+            inputLab.font = UIFont.init(name: "FZQingKeBenYueSongS-R-GB", size: 26.0)
+            inputLab.textColor = UIColor.init(colorLiteralRed: 35/255.0, green: 98/255.0, blue: 118/255.0, alpha: 1)
+            inputLab.numberOfLines = 0
+            inputLabel = inputLab
+            self.view.addSubview(inputLabel)
+            break
+        default:
+            print("init inputlabel error")
+            break
+        }
+        
+    }
+    
+    func wordButClick(sender: UIButton?){
+        
+        if (inputLabel.text?.characters.count)! < 11{
+            
+            if inputLabel.text == blankFrame {
+                inputLabel.text = sender?.title(for: .normal)
+            } else {
+                inputLabel.text = inputLabel.text! + (sender?.title(for: .normal))!
+            }
+            
+            sender?.isUserInteractionEnabled = false
+            
+            sender?.setTitleColor(UIColor.init(colorLiteralRed: 64/255.0, green: 64/255.0, blue: 64/255.0, alpha: 1), for: .normal)
+            
+            clickButTagArr.append((sender?.tag)!)
+            
+            checkButton.setBackgroundImage(UIImage(named: "检验2.png"), for: .normal)
+            
+        }
+        
+    }
+    
+    func delWord(){
+        
+        let index = clickButTagArr.popLast()!
+        buttonMatrix[index].setTitleColor(UIColor.init(colorLiteralRed: 31/255.0, green: 89/255.0, blue: 107/255.0, alpha: 1), for: .normal)
+        buttonMatrix[index].isUserInteractionEnabled = true
+        
+        if inputLabel.text?.characters.count == 1 {
+            
+            inputLabel.text = blankFrame
+            
+        } else {
+            
+            let _ = inputLabel.text?.characters.popLast()
+            
+        }
+        checkButton.setBackgroundImage(UIImage(named: "检验2.png"), for: .normal)
+        
+    }
+    
+    func clearInputLabel(){
+        
+        clickButTagArr.removeAll()
+        
+        for but in buttonMatrix {
+            
+            but.setTitleColor(UIColor.init(colorLiteralRed: 31/255.0, green: 89/255.0, blue: 107/255.0, alpha: 1), for: .normal)
+            but.isUserInteractionEnabled = true
+            
+        }
+        
+        inputLabel.text = blankFrame
+        checkButton.setBackgroundImage(UIImage(named: "检验2.png"), for: .normal)
     }
     
     
