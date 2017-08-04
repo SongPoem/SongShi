@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "a240cc7be8351ccb2226e4a2c3114aa2"
+build_time: [554911336, 494769000]
+inputs:
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/Pods/CircleProgressView/ProgressView/CircleProgressView.swift": [554911336, 0]

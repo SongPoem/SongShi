@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>康熙字典體(Demo).ttf</string>
+		<string>方正清刻本悦宋简体.ttf</string>
+		<string>方正苏新诗柳楷繁体.ttf</string>
+	</array>
+</dict>
+</plist>

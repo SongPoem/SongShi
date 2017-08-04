@@ -1,0 +1,225 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AIPlayer"
+- "LocalMatch"
+provides-nominal:
+- "CX6geDaHb8AIPlayer"
+- "CX6geDaHb10LocalMatch"
+provides-member:
+- ["CX6geDaHb8AIPlayer", ""]
+- ["CX6geDaHb10LocalMatch", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "=="
+- "AIPlayer"
+- "Action"
+- "AssignmentPrecedence"
+- !private "ChoiceAction"
+- !private "Date"
+- !private "GameSelection"
+- "GameState"
+- "Int"
+- "LocalMatch"
+- "Match"
+- "Player"
+- "Result"
+depends-member:
+- ["CX6geDaHb8AIPlayer", "Action"]
+- !private ["CX6geDaHb8AIPlayer", "ChoiceAction"]
+- !private ["CX6geDaHb8AIPlayer", "Date"]
+- !private ["CX6geDaHb8AIPlayer", "GameSelection"]
+- ["CX6geDaHb8AIPlayer", "GameState"]
+- ["CX6geDaHb8AIPlayer", "Int"]
+- ["CX6geDaHb8AIPlayer", "deinit"]
+- ["CX6geDaHb8AIPlayer", "init"]
+- ["CX6geDaHb8AIPlayer", "takeAction"]
+- !private ["Ps9AnyObject", "ChoiceAction"]
+- !private ["Ps9AnyObject", "Date"]
+- !private ["Ps9AnyObject", "_currentPlayerIndex"]
+- !private ["Ps9AnyObject", "add"]
+- !private ["Ps9AnyObject", "game"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "players"]
+- !private ["Ps9AnyObject", "state"]
+- !private ["Ps9AnyObject", "takeAction"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["CX6geDaHb12ChoiceAction", "deinit"]
+- !private ["CX6geDaHb12ChoiceAction", "init"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "timeIntervalSince1970"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSince1970"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSince1970"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps17CustomReflectable", "timeIntervalSince1970"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSince1970"]
+- !private ["V10Foundation4Date", "init"]
+- !private ["V10Foundation4Date", "timeIntervalSince1970"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "spock"]
+- !private ["Ps9Equatable", "timeIntervalSince1970"]
+- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["CX6geDaHb4Game", "add"]
+- !private ["CX6geDaHb4Game", "state"]
+- !private ["OX6geDaHb13GameSelection", "spock"]
+- !private ["VX6geDaHb9GameState", "currentPlayerIndex"]
+- !private ["VX6geDaHb9GameState", "status"]
+- ["OX6geDaHb10GameStatus", "awaitingPlay"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "spock"]
+- !private ["Ps8Hashable", "timeIntervalSince1970"]
+- ["CX6geDaHb10LocalMatch", "Int"]
+- ["CX6geDaHb10LocalMatch", "Result"]
+- !private ["CX6geDaHb10LocalMatch", "_currentPlayerIndex"]
+- ["CX6geDaHb10LocalMatch", "currentPlayerIndex"]
+- ["CX6geDaHb10LocalMatch", "deinit"]
+- ["CX6geDaHb10LocalMatch", "endMatch"]
+- !private ["CX6geDaHb10LocalMatch", "game"]
+- ["CX6geDaHb10LocalMatch", "init"]
+- !private ["CX6geDaHb10LocalMatch", "players"]
+- ["CX6geDaHb10LocalMatch", "saveTurn"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["CX6geDaHb5Match", "Int"]
+- ["CX6geDaHb5Match", "Result"]
+- ["CX6geDaHb5Match", "_currentPlayerIndex"]
+- ["CX6geDaHb5Match", "currentPlayerIndex"]
+- ["CX6geDaHb5Match", "endMatch"]
+- !private ["CX6geDaHb5Match", "game"]
+- ["CX6geDaHb5Match", "init"]
+- !private ["CX6geDaHb5Match", "players"]
+- ["CX6geDaHb5Match", "saveTurn"]
+- ["CX6geDaHb5Match", ""]
+- !private ["Ps17MutableCollection", "subscript"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- ["CX6geDaHb6Player", "Action"]
+- !private ["CX6geDaHb6Player", "ChoiceAction"]
+- !private ["CX6geDaHb6Player", "Date"]
+- !private ["CX6geDaHb6Player", "GameSelection"]
+- ["CX6geDaHb6Player", "GameState"]
+- ["CX6geDaHb6Player", "Int"]
+- ["CX6geDaHb6Player", "init"]
+- ["CX6geDaHb6Player", "takeAction"]
+- ["CX6geDaHb6Player", ""]
+- !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["Ps16RawRepresentable", "spock"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["P10Foundation20ReferenceConvertible", "timeIntervalSince1970"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps23_BidirectionalIndexable", "subscript"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "spock"]
+- !private ["Ps9_Hashable", "timeIntervalSince1970"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps17_MutableIndexable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "timeIntervalSince1970"]
+- !private ["Ps22_RandomAccessIndexable", "subscript"]
+- !private ["Ps26_RangeReplaceableIndexable", "subscript"]
+depends-nominal:
+- "CX6geDaHb8AIPlayer"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Sb"
+- !private "Ps7CVarArg"
+- !private "CX6geDaHb12ChoiceAction"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "V10Foundation4Date"
+- !private "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "CX6geDaHb4Game"
+- !private "OX6geDaHb13GameSelection"
+- !private "VX6geDaHb9GameState"
+- "OX6geDaHb10GameStatus"
+- !private "Ps8Hashable"
+- "CX6geDaHb10LocalMatch"
+- !private "Ps25LosslessStringConvertible"
+- "CX6geDaHb5Match"
+- !private "Ps17MutableCollection"
+- !private "PSo8NSCoding"
+- !private "PSo16NSObjectProtocol"
+- "CX6geDaHb6Player"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps16RawRepresentable"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "Ps8Sequence"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps17_MutableIndexable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GameKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AudioToolbox.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yuannnn/SongShi/\u8BF5\u8BD7/SQLiteBridge.h"
+interface-hash: "41053615b7f475e3ab0239f725ec0ee7"

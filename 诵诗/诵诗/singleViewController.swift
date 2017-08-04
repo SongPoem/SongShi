@@ -65,7 +65,6 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     //填空诗句符号
     let blankFrame = "︻\r\r\r\r\r\r\r︼"
     
-    
     //诵诗按钮
     let readButton = UIButton(type: UIButtonType.custom)
     
@@ -258,10 +257,23 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         inputText.translatesAutoresizingMaskIntoConstraints = false
         inputText.font = UIFont(name: "FZQingKeBenYueSongS-R-GB", size: 28)
         inputText.textAlignment = .center
-        inputText.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 1)
+        inputText.textColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 0)
         inputText.delegate = self
         inputText.returnKeyType = UIReturnKeyType.done
         inputText.isHidden = true
+        inputText.tintColor = UIColor(red: 31/255, green: 89/255, blue: 107/255, alpha: 0)
+        //监听输入变化
+        NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange(notification:)), name: .UITextFieldTextDidChange, object: inputText)
+    }
+    
+    @objc private func textFieldDidChange(notification: NSNotification){
+        let textField = notification.object as! UITextField
+        
+        if textField.text != blankFrame{
+            
+            poemlabel[blankNum].text = textField.text
+        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -348,7 +360,8 @@ class singleViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     static func openDB(){
         //打开数据库
         let path = Bundle.main.path(forResource: "poemsentence", ofType: "db")
-        let error = sqlite3_open_v2(path?.cString(using: .utf8), &singleViewController.db, SQLITE_OPEN_READONLY, nil)
+//        let error = sqlite3_open_v2(path?.cString(using: .utf8), &singleViewController.db, SQLITE_OPEN_READONLY, nil)
+        let error = sqlite3_open(path?.cString(using: .utf8), &singleViewController.db)
         
         //数据库打开失败
         if  error != SQLITE_OK {

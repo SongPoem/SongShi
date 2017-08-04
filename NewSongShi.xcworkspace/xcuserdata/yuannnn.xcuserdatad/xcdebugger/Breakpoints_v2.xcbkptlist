@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "561"
             endingLineNumber = "561"
-            landmarkName = "switchToNextPoem(slide:)"
+            landmarkName = "checkIfRight()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

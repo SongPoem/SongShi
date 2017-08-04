@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/yuannnn/SongShi/诵诗/DerivedData/Build/Products/Debug-iphoneos/CircleProgressView/CircleProgressView.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/yuannnn/SongShi/诵诗/DerivedData/Build/Intermediates/Pods.build/Debug-iphoneos/CircleProgressView.build/unextended-module.modulemap',
+    }]
+  }]
+}

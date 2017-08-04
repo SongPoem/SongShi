@@ -1,0 +1,7 @@
+use_frameworks!
+
+target ‘诵诗’ do
+  pod 'CircleProgressView', '~> 1.0'
+
+    
+end

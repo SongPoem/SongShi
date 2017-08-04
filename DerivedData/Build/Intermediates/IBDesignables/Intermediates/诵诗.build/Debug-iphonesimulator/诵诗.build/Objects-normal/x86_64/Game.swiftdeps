@@ -1,0 +1,570 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GameStatus"
+- "GameState"
+- "GameNotificationName"
+- "Game"
+provides-nominal:
+- "OX6geDaHb10GameStatus"
+- "VX6geDaHb9GameState"
+- "CX6geDaHb4Game"
+provides-member:
+- ["OX6geDaHb10GameStatus", ""]
+- ["VX6geDaHb9GameState", ""]
+- ["CX6geDaHb4Game", ""]
+provides-dynamic-lookup:
+- "process"
+depends-top-level:
+- !private "!"
+- !private "&&"
+- !private "+"
+- !private "..<"
+- !private "<"
+- !private "=="
+- !private ">"
+- "Action"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "CADisplayLink"
+- !private "Date"
+- !private "Dictionary"
+- "Game"
+- "GameNotificationName"
+- "GameSelection"
+- "GameState"
+- "GameStatus"
+- "Int"
+- "Match"
+- "Notification"
+- !private "NotificationCenter"
+- "Player"
+- "Result"
+- !private "RunLoop"
+- !private "RunLoopMode"
+- !private "SetCurrentPlayer"
+- !private "SetResults"
+- !private "StartGame"
+- "String"
+- "StringLiteralType"
+depends-member:
+- !private ["CX6geDaHb6Action", "applyTo"]
+- !private ["CX6geDaHb6Action", "init"]
+- !private ["CX6geDaHb6Action", "timeInterval"]
+- !private ["Ps9AnyObject", "Array"]
+- !private ["Ps9AnyObject", "CADisplayLink"]
+- !private ["Ps9AnyObject", "Date"]
+- !private ["Ps9AnyObject", "GameNotificationName"]
+- !private ["Ps9AnyObject", "GameState"]
+- !private ["Ps9AnyObject", "NotificationCenter"]
+- !private ["Ps9AnyObject", "RunLoop"]
+- !private ["Ps9AnyObject", "RunLoopMode"]
+- !private ["Ps9AnyObject", "SetCurrentPlayer"]
+- !private ["Ps9AnyObject", "SetResults"]
+- !private ["Ps9AnyObject", "StartGame"]
+- !private ["Ps9AnyObject", "actions"]
+- !private ["Ps9AnyObject", "add"]
+- !private ["Ps9AnyObject", "applyTo"]
+- !private ["Ps9AnyObject", "current"]
+- !private ["Ps9AnyObject", "default"]
+- !private ["Ps9AnyObject", "hasUnprocessedAction"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isServer"]
+- !private ["Ps9AnyObject", "localPlayerIdentifier"]
+- !private ["Ps9AnyObject", "match"]
+- !private ["Ps9AnyObject", "nextPlayer"]
+- !private ["Ps9AnyObject", "players"]
+- !private ["Ps9AnyObject", "post"]
+- !private ["Ps9AnyObject", "preferredFramesPerSecond"]
+- !private ["Ps9AnyObject", "process"]
+- !private ["Ps9AnyObject", "state"]
+- !private ["Ps9AnyObject", "timeInterval"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "first"]
+- !private ["Sa", "forEach"]
+- !private ["Sa", "init"]
+- !private ["Sa", "removeFirst"]
+- !private ["Sa", "shift"]
+- !private ["Sa", "sorted"]
+- !private ["Ps23BidirectionalCollection", "append"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "first"]
+- !private ["Ps23BidirectionalCollection", "forEach"]
+- !private ["Ps23BidirectionalCollection", "init"]
+- !private ["Ps23BidirectionalCollection", "removeFirst"]
+- !private ["Ps23BidirectionalCollection", "shift"]
+- !private ["Ps23BidirectionalCollection", "sorted"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["CSo13CADisplayLink", "add"]
+- !private ["CSo13CADisplayLink", "init"]
+- !private ["CSo13CADisplayLink", "preferredFramesPerSecond"]
+- !private ["Ps7CVarArg", "add"]
+- !private ["Ps7CVarArg", "append"]
+- !private ["Ps7CVarArg", "applyTo"]
+- !private ["Ps7CVarArg", "count"]
+- !private ["Ps7CVarArg", "current"]
+- !private ["Ps7CVarArg", "default"]
+- !private ["Ps7CVarArg", "first"]
+- !private ["Ps7CVarArg", "forEach"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "post"]
+- !private ["Ps7CVarArg", "preferredFramesPerSecond"]
+- !private ["Ps7CVarArg", "removeFirst"]
+- !private ["Ps7CVarArg", "shift"]
+- !private ["Ps7CVarArg", "sorted"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "timeInterval"]
+- !private ["Ps10Collection", "append"]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "first"]
+- !private ["Ps10Collection", "forEach"]
+- !private ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "removeFirst"]
+- !private ["Ps10Collection", "shift"]
+- !private ["Ps10Collection", "sorted"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "commonModes"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "timeIntervalSince1970"]
+- ["Ps28CustomDebugStringConvertible", "Name"]
+- !private ["Ps28CustomDebugStringConvertible", "add"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "applyTo"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- !private ["Ps28CustomDebugStringConvertible", "current"]
+- !private ["Ps28CustomDebugStringConvertible", "default"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
+- !private ["Ps28CustomDebugStringConvertible", "forEach"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "post"]
+- !private ["Ps28CustomDebugStringConvertible", "preferredFramesPerSecond"]
+- !private ["Ps28CustomDebugStringConvertible", "removeFirst"]
+- !private ["Ps28CustomDebugStringConvertible", "shift"]
+- !private ["Ps28CustomDebugStringConvertible", "sorted"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "timeInterval"]
+- !private ["Ps28CustomDebugStringConvertible", "timeIntervalSince1970"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "timeIntervalSince1970"]
+- ["Ps17CustomReflectable", "Name"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "append"]
+- !private ["Ps17CustomReflectable", "count"]
+- !private ["Ps17CustomReflectable", "first"]
+- !private ["Ps17CustomReflectable", "forEach"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "removeFirst"]
+- !private ["Ps17CustomReflectable", "shift"]
+- !private ["Ps17CustomReflectable", "sorted"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps17CustomReflectable", "timeIntervalSince1970"]
+- ["Ps23CustomStringConvertible", "Name"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "add"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "applyTo"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- !private ["Ps23CustomStringConvertible", "current"]
+- !private ["Ps23CustomStringConvertible", "default"]
+- !private ["Ps23CustomStringConvertible", "first"]
+- !private ["Ps23CustomStringConvertible", "forEach"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "post"]
+- !private ["Ps23CustomStringConvertible", "preferredFramesPerSecond"]
+- !private ["Ps23CustomStringConvertible", "removeFirst"]
+- !private ["Ps23CustomStringConvertible", "shift"]
+- !private ["Ps23CustomStringConvertible", "sorted"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "timeInterval"]
+- !private ["Ps23CustomStringConvertible", "timeIntervalSince1970"]
+- !private ["V10Foundation4Date", "init"]
+- !private ["V10Foundation4Date", "timeIntervalSince1970"]
+- !private ["Vs10Dictionary", "count"]
+- !private ["Vs10Dictionary", "subscript"]
+- ["Ps9Equatable", "Name"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "add"]
+- !private ["Ps9Equatable", "applyTo"]
+- !private ["Ps9Equatable", "commonModes"]
+- !private ["Ps9Equatable", "compare"]
+- !private ["Ps9Equatable", "current"]
+- !private ["Ps9Equatable", "default"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "opposite"]
+- !private ["Ps9Equatable", "post"]
+- !private ["Ps9Equatable", "preferredFramesPerSecond"]
+- !private ["Ps9Equatable", "timeInterval"]
+- !private ["Ps9Equatable", "timeIntervalSince1970"]
+- !private ["Ps25ExpressibleByArrayLiteral", "append"]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "first"]
+- !private ["Ps25ExpressibleByArrayLiteral", "forEach"]
+- !private ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps25ExpressibleByArrayLiteral", "removeFirst"]
+- !private ["Ps25ExpressibleByArrayLiteral", "shift"]
+- !private ["Ps25ExpressibleByArrayLiteral", "sorted"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "count"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["CX6geDaHb4Game", "Action"]
+- !private ["CX6geDaHb4Game", "Array"]
+- ["CX6geDaHb4Game", "Bool"]
+- !private ["CX6geDaHb4Game", "CADisplayLink"]
+- !private ["CX6geDaHb4Game", "Date"]
+- !private ["CX6geDaHb4Game", "GameNotificationName"]
+- ["CX6geDaHb4Game", "GameState"]
+- ["CX6geDaHb4Game", "Int"]
+- ["CX6geDaHb4Game", "Match"]
+- !private ["CX6geDaHb4Game", "NotificationCenter"]
+- ["CX6geDaHb4Game", "Player"]
+- !private ["CX6geDaHb4Game", "RunLoop"]
+- !private ["CX6geDaHb4Game", "RunLoopMode"]
+- !private ["CX6geDaHb4Game", "SetCurrentPlayer"]
+- !private ["CX6geDaHb4Game", "SetResults"]
+- !private ["CX6geDaHb4Game", "StartGame"]
+- ["CX6geDaHb4Game", "String"]
+- ["CX6geDaHb4Game", "actions"]
+- ["CX6geDaHb4Game", "add"]
+- ["CX6geDaHb4Game", "deinit"]
+- ["CX6geDaHb4Game", "hasUnprocessedAction"]
+- ["CX6geDaHb4Game", "init"]
+- ["CX6geDaHb4Game", "isServer"]
+- ["CX6geDaHb4Game", "localPlayerIdentifier"]
+- ["CX6geDaHb4Game", "match"]
+- ["CX6geDaHb4Game", "nextPlayer"]
+- ["CX6geDaHb4Game", "players"]
+- ["CX6geDaHb4Game", "process"]
+- ["CX6geDaHb4Game", "start"]
+- ["CX6geDaHb4Game", "state"]
+- !private ["OX6geDaHb13GameSelection", "compare"]
+- ["VX6geDaHb9GameState", "GameSelection"]
+- ["VX6geDaHb9GameState", "GameStatus"]
+- ["VX6geDaHb9GameState", "Int"]
+- ["VX6geDaHb9GameState", "currentPlayerIndex"]
+- ["VX6geDaHb9GameState", "init"]
+- ["VX6geDaHb9GameState", "playerChoices"]
+- ["VX6geDaHb9GameState", "status"]
+- ["OX6geDaHb10GameStatus", "Int"]
+- ["OX6geDaHb10GameStatus", "Result"]
+- ["OX6geDaHb10GameStatus", "awaitingPlay"]
+- ["OX6geDaHb10GameStatus", "awaitingStartingPlayer"]
+- ["OX6geDaHb10GameStatus", "finished"]
+- ["OX6geDaHb10GameStatus", "notStarted"]
+- ["OX6geDaHb10GameStatus", "turnComplete"]
+- ["Ps8Hashable", "Name"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "add"]
+- !private ["Ps8Hashable", "applyTo"]
+- !private ["Ps8Hashable", "commonModes"]
+- !private ["Ps8Hashable", "compare"]
+- !private ["Ps8Hashable", "current"]
+- !private ["Ps8Hashable", "default"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "opposite"]
+- !private ["Ps8Hashable", "post"]
+- !private ["Ps8Hashable", "preferredFramesPerSecond"]
+- !private ["Ps8Hashable", "timeInterval"]
+- !private ["Ps8Hashable", "timeIntervalSince1970"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["CX6geDaHb5Match", "actions"]
+- !private ["CX6geDaHb5Match", "isServer"]
+- !private ["CX6geDaHb5Match", "localPlayerIdentifier"]
+- !private ["CX6geDaHb5Match", "players"]
+- ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "append"]
+- !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "first"]
+- !private ["Ps17MutableCollection", "forEach"]
+- !private ["Ps17MutableCollection", "init"]
+- !private ["Ps17MutableCollection", "removeFirst"]
+- !private ["Ps17MutableCollection", "shift"]
+- !private ["Ps17MutableCollection", "sorted"]
+- !private ["PSo8NSCoding", "applyTo"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "timeInterval"]
+- ["PSo9NSCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "add"]
+- !private ["CSo8NSObject", "applyTo"]
+- !private ["CSo8NSObject", "current"]
+- !private ["CSo8NSObject", "default"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "post"]
+- !private ["CSo8NSObject", "preferredFramesPerSecond"]
+- !private ["CSo8NSObject", "timeInterval"]
+- !private ["PSo16NSObjectProtocol", "add"]
+- !private ["PSo16NSObjectProtocol", "applyTo"]
+- !private ["PSo16NSObjectProtocol", "current"]
+- !private ["PSo16NSObjectProtocol", "default"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "post"]
+- !private ["PSo16NSObjectProtocol", "preferredFramesPerSecond"]
+- !private ["PSo16NSObjectProtocol", "timeInterval"]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- ["VCSo14NSNotification4Name", "init"]
+- ["V10Foundation12Notification", "Name"]
+- !private ["CSo18NotificationCenter", "default"]
+- !private ["CSo18NotificationCenter", "post"]
+- !private ["CX6geDaHb17PlayerIndexAction", "init"]
+- !private ["Ps22RandomAccessCollection", "append"]
+- !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "first"]
+- !private ["Ps22RandomAccessCollection", "forEach"]
+- !private ["Ps22RandomAccessCollection", "init"]
+- !private ["Ps22RandomAccessCollection", "removeFirst"]
+- !private ["Ps22RandomAccessCollection", "shift"]
+- !private ["Ps22RandomAccessCollection", "sorted"]
+- !private ["Ps26RangeReplaceableCollection", "append"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "first"]
+- !private ["Ps26RangeReplaceableCollection", "forEach"]
+- !private ["Ps26RangeReplaceableCollection", "init"]
+- !private ["Ps26RangeReplaceableCollection", "removeFirst"]
+- !private ["Ps26RangeReplaceableCollection", "shift"]
+- !private ["Ps26RangeReplaceableCollection", "sorted"]
+- !private ["Ps16RawRepresentable", "commonModes"]
+- !private ["Ps16RawRepresentable", "compare"]
+- ["Ps16RawRepresentable", "init"]
+- !private ["Ps16RawRepresentable", "opposite"]
+- ["P10Foundation20ReferenceConvertible", "Name"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["P10Foundation20ReferenceConvertible", "timeIntervalSince1970"]
+- !private ["OX6geDaHb6Result", "opposite"]
+- !private ["CSo7RunLoop", "current"]
+- !private ["VSC11RunLoopMode", "commonModes"]
+- !private ["Ps8Sequence", "append"]
+- !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "first"]
+- !private ["Ps8Sequence", "forEach"]
+- !private ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "removeFirst"]
+- !private ["Ps8Sequence", "shift"]
+- !private ["Ps8Sequence", "sorted"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["CX6geDaHb16SetCurrentPlayer", "init"]
+- !private ["CX6geDaHb10SetResults", "deinit"]
+- !private ["CX6geDaHb10SetResults", "init"]
+- !private ["CX6geDaHb9StartGame", "init"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps14_ArrayProtocol", "append"]
+- !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "first"]
+- !private ["Ps14_ArrayProtocol", "forEach"]
+- !private ["Ps14_ArrayProtocol", "init"]
+- !private ["Ps14_ArrayProtocol", "removeFirst"]
+- !private ["Ps14_ArrayProtocol", "shift"]
+- !private ["Ps14_ArrayProtocol", "sorted"]
+- !private ["Ps23_BidirectionalIndexable", "append"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
+- !private ["Ps23_BidirectionalIndexable", "first"]
+- !private ["Ps23_BidirectionalIndexable", "forEach"]
+- !private ["Ps23_BidirectionalIndexable", "init"]
+- !private ["Ps23_BidirectionalIndexable", "removeFirst"]
+- !private ["Ps23_BidirectionalIndexable", "shift"]
+- !private ["Ps23_BidirectionalIndexable", "sorted"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "first"]
+- !private ["Ps24_DestructorSafeContainer", "forEach"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "removeFirst"]
+- !private ["Ps24_DestructorSafeContainer", "shift"]
+- !private ["Ps24_DestructorSafeContainer", "sorted"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps33_ExpressibleByStringInterpolation", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "Name"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "add"]
+- !private ["Ps9_Hashable", "applyTo"]
+- !private ["Ps9_Hashable", "commonModes"]
+- !private ["Ps9_Hashable", "compare"]
+- !private ["Ps9_Hashable", "current"]
+- !private ["Ps9_Hashable", "default"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "opposite"]
+- !private ["Ps9_Hashable", "post"]
+- !private ["Ps9_Hashable", "preferredFramesPerSecond"]
+- !private ["Ps9_Hashable", "timeInterval"]
+- !private ["Ps9_Hashable", "timeIntervalSince1970"]
+- !private ["Ps10_Indexable", "append"]
+- !private ["Ps10_Indexable", "count"]
+- !private ["Ps10_Indexable", "first"]
+- !private ["Ps10_Indexable", "forEach"]
+- !private ["Ps10_Indexable", "init"]
+- !private ["Ps10_Indexable", "removeFirst"]
+- !private ["Ps10_Indexable", "shift"]
+- !private ["Ps10_Indexable", "sorted"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "append"]
+- !private ["Ps14_IndexableBase", "count"]
+- !private ["Ps14_IndexableBase", "first"]
+- !private ["Ps14_IndexableBase", "forEach"]
+- !private ["Ps14_IndexableBase", "init"]
+- !private ["Ps14_IndexableBase", "removeFirst"]
+- !private ["Ps14_IndexableBase", "shift"]
+- !private ["Ps14_IndexableBase", "sorted"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps17_MutableIndexable", "append"]
+- !private ["Ps17_MutableIndexable", "count"]
+- !private ["Ps17_MutableIndexable", "first"]
+- !private ["Ps17_MutableIndexable", "forEach"]
+- !private ["Ps17_MutableIndexable", "init"]
+- !private ["Ps17_MutableIndexable", "removeFirst"]
+- !private ["Ps17_MutableIndexable", "shift"]
+- !private ["Ps17_MutableIndexable", "sorted"]
+- ["Ps21_ObjectiveCBridgeable", "Name"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "commonModes"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
+- !private ["Ps21_ObjectiveCBridgeable", "forEach"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "removeFirst"]
+- !private ["Ps21_ObjectiveCBridgeable", "shift"]
+- !private ["Ps21_ObjectiveCBridgeable", "sorted"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "timeIntervalSince1970"]
+- !private ["Ps22_RandomAccessIndexable", "append"]
+- !private ["Ps22_RandomAccessIndexable", "count"]
+- !private ["Ps22_RandomAccessIndexable", "first"]
+- !private ["Ps22_RandomAccessIndexable", "forEach"]
+- !private ["Ps22_RandomAccessIndexable", "init"]
+- !private ["Ps22_RandomAccessIndexable", "removeFirst"]
+- !private ["Ps22_RandomAccessIndexable", "shift"]
+- !private ["Ps22_RandomAccessIndexable", "sorted"]
+- !private ["Ps26_RangeReplaceableIndexable", "append"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
+- !private ["Ps26_RangeReplaceableIndexable", "first"]
+- !private ["Ps26_RangeReplaceableIndexable", "forEach"]
+- !private ["Ps26_RangeReplaceableIndexable", "init"]
+- !private ["Ps26_RangeReplaceableIndexable", "removeFirst"]
+- !private ["Ps26_RangeReplaceableIndexable", "shift"]
+- !private ["Ps26_RangeReplaceableIndexable", "sorted"]
+- !private ["Ps20_SwiftNewtypeWrapper", "commonModes"]
+- ["Ps20_SwiftNewtypeWrapper", "init"]
+depends-nominal:
+- !private "CX6geDaHb6Action"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Sb"
+- !private "CSo13CADisplayLink"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "V10Foundation4Date"
+- !private "Vs10Dictionary"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "CX6geDaHb4Game"
+- !private "OX6geDaHb13GameSelection"
+- "VX6geDaHb9GameState"
+- "OX6geDaHb10GameStatus"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- !private "CX6geDaHb5Match"
+- "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- !private "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "VCSo14NSNotification4Name"
+- "V10Foundation12Notification"
+- !private "CSo18NotificationCenter"
+- !private "CX6geDaHb17PlayerIndexAction"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- "Ps16RawRepresentable"
+- "P10Foundation20ReferenceConvertible"
+- !private "OX6geDaHb6Result"
+- !private "CSo7RunLoop"
+- !private "VSC11RunLoopMode"
+- !private "Ps8Sequence"
+- !private "CX6geDaHb16SetCurrentPlayer"
+- !private "CX6geDaHb10SetResults"
+- !private "CX6geDaHb9StartGame"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps17_MutableIndexable"
+- "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+- "Ps20_SwiftNewtypeWrapper"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AudioToolbox.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yuannnn/SongShi/\u8BF5\u8BD7/SQLiteBridge.h"
+interface-hash: "330c561fce7918089bd3e7bb5747b681"

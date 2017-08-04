@@ -109,7 +109,20 @@
 		188AFBFA1EB39AD500A4DD94 /* PBG16.png in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBE81EB39AD500A4DD94 /* PBG16.png */; };
 		188AFBFB1EB39AD500A4DD94 /* PBG17.png in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBE91EB39AD500A4DD94 /* PBG17.png */; };
 		188AFBFC1EB39AD500A4DD94 /* PBG18.png in Resources */ = {isa = PBXBuildFile; fileRef = 188AFBEA1EB39AD500A4DD94 /* PBG18.png */; };
+		956453261F2DCF9D00E294EB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956453251F2DCF9D00E294EB /* GameKit.framework */; };
+		959327EF1F30A6AC003FE266 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959327ED1F30A6AC003FE266 /* CircleProgressView.swift */; };
 		95C11F3B1EAF6DF600F94B4A /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */; };
+		95FC56E61F2E211F00DBF151 /* gamemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56E51F2E211F00DBF151 /* gamemViewController.swift */; };
+		95FC56E81F2E2C9800DBF151 /* gameLeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56E71F2E2C9800DBF151 /* gameLeadViewController.swift */; };
+		95FC56EA1F2EDA1C00DBF151 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56E91F2EDA1C00DBF151 /* Match.swift */; };
+		95FC56EC1F2EDD3900DBF151 /* GameCenterMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56EB1F2EDD3900DBF151 /* GameCenterMatch.swift */; };
+		95FC56EE1F2F04B300DBF151 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56ED1F2F04B300DBF151 /* Extensions.swift */; };
+		95FC56F01F2F050F00DBF151 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56EF1F2F050F00DBF151 /* Game.swift */; };
+		95FC56F21F2F052000DBF151 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56F11F2F052000DBF151 /* Action.swift */; };
+		95FC56F41F2F052A00DBF151 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56F31F2F052A00DBF151 /* Player.swift */; };
+		95FC56F71F2F057D00DBF151 /* GameSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56F61F2F057D00DBF151 /* GameSelection.swift */; };
+		95FC56F91F2F077A00DBF151 /* LocalMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FC56F81F2F077A00DBF151 /* LocalMatch.swift */; };
+		E46DFBCB315474D6B86DB3C0 /* Pods___.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F77ED43EBF5F51EF55521842 /* Pods___.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -218,7 +231,26 @@
 		188AFBE81EB39AD500A4DD94 /* PBG16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBG16.png; sourceTree = "<group>"; };
 		188AFBE91EB39AD500A4DD94 /* PBG17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBG17.png; sourceTree = "<group>"; };
 		188AFBEA1EB39AD500A4DD94 /* PBG18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBG18.png; sourceTree = "<group>"; };
+		7B63F10DABCA5DF68A60B27C /* Pods-诵诗.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-诵诗.release.xcconfig"; path = "Pods/Target Support Files/Pods-诵诗/Pods-诵诗.release.xcconfig"; sourceTree = "<group>"; };
+		956453241F2DCF9600E294EB /* 诵诗.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "诵诗.entitlements"; sourceTree = "<group>"; };
+		956453251F2DCF9D00E294EB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		959327EA1F30A6AC003FE266 /* CircleProgressView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CircleProgressView-Bridging-Header.h"; sourceTree = "<group>"; };
+		959327EB1F30A6AC003FE266 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		959327ED1F30A6AC003FE266 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		959327F01F30ADAC003FE266 /* 康熙字典體(Demo).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "康熙字典體(Demo).ttf"; sourceTree = "<group>"; };
 		95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		95FC56E51F2E211F00DBF151 /* gamemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamemViewController.swift; sourceTree = "<group>"; };
+		95FC56E71F2E2C9800DBF151 /* gameLeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameLeadViewController.swift; sourceTree = "<group>"; };
+		95FC56E91F2EDA1C00DBF151 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		95FC56EB1F2EDD3900DBF151 /* GameCenterMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenterMatch.swift; sourceTree = "<group>"; };
+		95FC56ED1F2F04B300DBF151 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		95FC56EF1F2F050F00DBF151 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		95FC56F11F2F052000DBF151 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		95FC56F31F2F052A00DBF151 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		95FC56F61F2F057D00DBF151 /* GameSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelection.swift; sourceTree = "<group>"; };
+		95FC56F81F2F077A00DBF151 /* LocalMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalMatch.swift; sourceTree = "<group>"; };
+		9C366B4E3BBFE73DC23E5A5F /* Pods-诵诗.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-诵诗.debug.xcconfig"; path = "Pods/Target Support Files/Pods-诵诗/Pods-诵诗.debug.xcconfig"; sourceTree = "<group>"; };
+		F77ED43EBF5F51EF55521842 /* Pods___.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods___.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +258,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956453261F2DCF9D00E294EB /* GameKit.framework in Frameworks */,
 				04B512741EA7024900E986A0 /* libsqlite3.tbd in Frameworks */,
 				04B512721EA7004B00E986A0 /* libsqlite3.0.tbd in Frameworks */,
+				E46DFBCB315474D6B86DB3C0 /* Pods___.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +274,7 @@
 				0409EEE71E854E7F00DB2596 /* 诵诗 */,
 				0409EEE61E854E7F00DB2596 /* Products */,
 				04B512701EA7004B00E986A0 /* Frameworks */,
+				E56C42C71FB9A9E087EC5263 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,6 +289,7 @@
 		0409EEE71E854E7F00DB2596 /* 诵诗 */ = {
 			isa = PBXGroup;
 			children = (
+				956453241F2DCF9600E294EB /* 诵诗.entitlements */,
 				188AFBD71EB39AB800A4DD94 /* singleViewController.swift */,
 				188AFBC11EB3954A00A4DD94 /* Assets.xcassets */,
 				95C11F3A1EAF6DF600F94B4A /* GuideViewController.swift */,
@@ -263,6 +299,7 @@
 				04D1716A1F2DA29E0050CD92 /* secondView.swift */,
 				0409EEEA1E854E7F00DB2596 /* ViewController.swift */,
 				0409EEEC1E854E7F00DB2596 /* Main.storyboard */,
+				95FC56F51F2F053A00DBF151 /* gamePart */,
 				0477BFC41EA8941F009B7B25 /* explainViewController.swift */,
 				0409EF0F1E854F6000DB2596 /* source */,
 				0409EEF11E854E7F00DB2596 /* LaunchScreen.storyboard */,
@@ -295,6 +332,7 @@
 				0477BFCE1EAC6BB0009B7B25 /* 赏析选中.png */,
 				0477BFCF1EAC6BB0009B7B25 /* 赏析未选中.png */,
 				04B512261EA6609500E986A0 /* 二.png */,
+				959327F01F30ADAC003FE266 /* 康熙字典體(Demo).ttf */,
 				04B512271EA6609500E986A0 /* 一.png */,
 				0409EF4A1E854F8200DB2596 /* 康熙字典體(Demo).ttf */,
 				04B2FF6E1E8917C200753E38 /* BG.png */,
@@ -333,8 +371,10 @@
 		04B512701EA7004B00E986A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				956453251F2DCF9D00E294EB /* GameKit.framework */,
 				04B512731EA7024900E986A0 /* libsqlite3.tbd */,
 				04B512711EA7004B00E986A0 /* libsqlite3.0.tbd */,
+				F77ED43EBF5F51EF55521842 /* Pods___.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -386,6 +426,43 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		959327E91F30A6AC003FE266 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				959327EA1F30A6AC003FE266 /* CircleProgressView-Bridging-Header.h */,
+				959327EB1F30A6AC003FE266 /* CircleProgressView.h */,
+				959327ED1F30A6AC003FE266 /* CircleProgressView.swift */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		95FC56F51F2F053A00DBF151 /* gamePart */ = {
+			isa = PBXGroup;
+			children = (
+				959327E91F30A6AC003FE266 /* ProgressView */,
+				95FC56F81F2F077A00DBF151 /* LocalMatch.swift */,
+				95FC56E91F2EDA1C00DBF151 /* Match.swift */,
+				95FC56F11F2F052000DBF151 /* Action.swift */,
+				95FC56F31F2F052A00DBF151 /* Player.swift */,
+				95FC56F61F2F057D00DBF151 /* GameSelection.swift */,
+				95FC56E71F2E2C9800DBF151 /* gameLeadViewController.swift */,
+				95FC56EB1F2EDD3900DBF151 /* GameCenterMatch.swift */,
+				95FC56ED1F2F04B300DBF151 /* Extensions.swift */,
+				95FC56E51F2E211F00DBF151 /* gamemViewController.swift */,
+				95FC56EF1F2F050F00DBF151 /* Game.swift */,
+			);
+			name = gamePart;
+			sourceTree = "<group>";
+		};
+		E56C42C71FB9A9E087EC5263 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C366B4E3BBFE73DC23E5A5F /* Pods-诵诗.debug.xcconfig */,
+				7B63F10DABCA5DF68A60B27C /* Pods-诵诗.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,9 +470,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0409EEF71E854E7F00DB2596 /* Build configuration list for PBXNativeTarget "诵诗" */;
 			buildPhases = (
+				81C0A744C63492B4F4F66CAB /* [CP] Check Pods Manifest.lock */,
 				0409EEE11E854E7F00DB2596 /* Sources */,
 				0409EEE21E854E7F00DB2596 /* Frameworks */,
 				0409EEE31E854E7F00DB2596 /* Resources */,
+				294862B72142633104D69113 /* [CP] Embed Pods Frameworks */,
+				5AE4BD72C74B4DF227BDE820 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,6 +500,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 2XYAGB2947;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -544,18 +632,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		294862B72142633104D69113 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-诵诗/Pods-诵诗-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE4BD72C74B4DF227BDE820 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-诵诗/Pods-诵诗-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C0A744C63492B4F4F66CAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0409EEE11E854E7F00DB2596 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95FC56E81F2E2C9800DBF151 /* gameLeadViewController.swift in Sources */,
 				0477BFC51EA8941F009B7B25 /* explainViewController.swift in Sources */,
 				0409EEFB1E854E9800DB2596 /* LevelsViewController.swift in Sources */,
 				04D1716B1F2DA29E0050CD92 /* secondView.swift in Sources */,
+				95FC56F41F2F052A00DBF151 /* Player.swift in Sources */,
 				188AFBD81EB39AB800A4DD94 /* singleViewController.swift in Sources */,
+				95FC56E61F2E211F00DBF151 /* gamemViewController.swift in Sources */,
+				95FC56F71F2F057D00DBF151 /* GameSelection.swift in Sources */,
 				04D171631F2B75B20050CD92 /* entranceViewController.swift in Sources */,
 				0409EEEB1E854E7F00DB2596 /* ViewController.swift in Sources */,
+				95FC56EE1F2F04B300DBF151 /* Extensions.swift in Sources */,
+				95FC56F01F2F050F00DBF151 /* Game.swift in Sources */,
+				95FC56EC1F2EDD3900DBF151 /* GameCenterMatch.swift in Sources */,
+				95FC56F91F2F077A00DBF151 /* LocalMatch.swift in Sources */,
+				95FC56EA1F2EDA1C00DBF151 /* Match.swift in Sources */,
 				0409EEE91E854E7F00DB2596 /* AppDelegate.swift in Sources */,
+				959327EF1F30A6AC003FE266 /* CircleProgressView.swift in Sources */,
+				95FC56F21F2F052000DBF151 /* Action.swift in Sources */,
 				95C11F3B1EAF6DF600F94B4A /* GuideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,13 +822,18 @@
 		};
 		0409EEF81E854E7F00DB2596 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C366B4E3BBFE73DC23E5A5F /* Pods-诵诗.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2XYAGB2947;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "诵诗/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.cocoagame.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tac.songshi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = SQLiteBridge.h;
@@ -692,13 +844,18 @@
 		};
 		0409EEF91E854E7F00DB2596 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B63F10DABCA5DF68A60B27C /* Pods-诵诗.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2XYAGB2947;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "诵诗/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.cocoagame.--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tac.songshi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = SQLiteBridge.h;

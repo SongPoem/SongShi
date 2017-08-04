@@ -1,0 +1,12 @@
+PODS:
+  - CircleProgressView (1.1.2)
+
+DEPENDENCIES:
+  - CircleProgressView (~> 1.0)
+
+SPEC CHECKSUMS:
+  CircleProgressView: 1e25a96d95bfabaaf91fad52ed801d12af057170
+
+PODFILE CHECKSUM: c22db91aebc3f3ef049af6b22577c77185c36d5e
+
+COCOAPODS: 1.2.1

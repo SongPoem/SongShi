@@ -100,8 +100,15 @@ class entranceViewController: UIViewController{
     }
     
     func toLevels(){
-        performSegue(withIdentifier: "toLevels", sender: self)
-        print("yes")
+        switch self.layer {
+        case 2:
+            performSegue(withIdentifier: "toChallenge", sender: self)
+            print("yes")
+        case 3: break
+        default:
+            performSegue(withIdentifier: "toLevels", sender: self)
+            print("yes")
+        }
         
     }
     

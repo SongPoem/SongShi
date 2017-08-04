@@ -1,0 +1,23 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "60a769561b6f0b820de8798747871373"
+build_time: [555155574, 799648000]
+inputs:
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/gameLeadViewController.swift": [555155574, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/explainViewController.swift": [554717180, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/LevelsViewController.swift": [554717180, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/secondView.swift": [554717180, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/Player.swift": [554730980, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/singleViewController.swift": [555083028, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/gamemViewController.swift": [555148645, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/GameSelection.swift": [554730980, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/entranceViewController.swift": [554737888, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/ViewController.swift": [554717180, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/Extensions.swift": [554730980, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/Game.swift": [555143020, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/GameCenterMatch.swift": [554797765, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/LocalMatch.swift": [555092230, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/Match.swift": [554730980, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/AppDelegate.swift": [554717180, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/ProgressView/CircleProgressView.swift": [554910875, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/Action.swift": [555142925, 0]
+  "/Users/yuannnn/SongShi/\u8BF5\u8BD7/\u8BF5\u8BD7/GuideViewController.swift": [554717180, 0]
