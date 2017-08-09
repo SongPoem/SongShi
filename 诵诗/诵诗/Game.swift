@@ -14,6 +14,7 @@ enum GameStatus {
     case awaitingStartingPlayer
     case awaitingPlay
     case turnComplete
+    case turnRight
     case finished(results: [Int: Result])
 }
 
@@ -22,12 +23,16 @@ struct GameState {
     var status: GameStatus
     var playerChoices: [Int: GameSelection]
     var playerScore: [Int]
+    var poemRight: [String]
+    var currPoemRight: Int
     
     init() {
         self.currentPlayerIndex = nil
         self.status = .notStarted
         self.playerChoices = [:]
         self.playerScore = [0,0]
+        self.poemRight = ["","","","","","","","","","","","","","","","","","","",""]
+        self.currPoemRight = -1
     }
 }
 
@@ -81,7 +86,7 @@ class Game {
 //                    let secondPlayerSelection = self.state.playerChoices[1] else { return }
 //                let result = firstPlayerSelection.compare(against: secondPlayerSelection)
 //                let results = [ 0: result, 1: result.opposite ]
-            if state.playerScore[0] == 10 || state.playerScore[1]==10 {//本局完成
+            if state.playerScore[0] == 10 || state.playerScore[1] == 10 {//本局完成
                 var result = Result.lost
                 if state.playerScore[0] == 10 && state.playerScore[1] == 10{
                     result = Result.tie

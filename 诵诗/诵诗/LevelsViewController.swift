@@ -53,6 +53,14 @@ class LevelsViewController: UIViewController{
         //adjustments to button font
         bulidArr()
         enableButtons()
+        
+        self.navigationController?.isNavigationBarHidden = false
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        let item = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = item
 //        self.navigationController?.isNavigationBarHidden = false
     }
     

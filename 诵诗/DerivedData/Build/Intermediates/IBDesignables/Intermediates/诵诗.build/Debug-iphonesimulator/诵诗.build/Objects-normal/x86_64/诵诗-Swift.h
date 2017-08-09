@@ -434,10 +434,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat width;)
 @property (nonatomic, weak) IBOutlet CircleProgressView * _Null_unspecified head2;
 @property (nonatomic, readonly, strong) NSNumberFormatter * _Nonnull nf;
 @property (nonatomic, copy) NSArray<Action *> * _Nonnull actions;
+- (IBAction)test:(id _Nonnull)sender;
+- (void)remForAll;
 - (NSInteger)blankID1WithLineLimit:(NSInteger)lineLimit SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL currentPlayerIsActive;
 @property (nonatomic, readonly) NSInteger currentPlayerIndex;
 - (void)viewDidLoad;
+- (void)query;
+- (NSString * _Nullable)operateQueryWithKey:(NSString * _Nullable)key SWIFT_WARN_UNUSED_RESULT;
 - (void)initTitle SWIFT_METHOD_FAMILY(none);
 - (void)initLabel SWIFT_METHOD_FAMILY(none);
 - (void)keyboardDisappearWithTap:(UITapGestureRecognizer * _Nonnull)tap;

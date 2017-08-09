@@ -248,10 +248,13 @@ depends-member:
 - ["VX6geDaHb9GameState", "GameSelection"]
 - ["VX6geDaHb9GameState", "GameStatus"]
 - ["VX6geDaHb9GameState", "Int"]
+- ["VX6geDaHb9GameState", "String"]
+- ["VX6geDaHb9GameState", "currPoemRight"]
 - ["VX6geDaHb9GameState", "currentPlayerIndex"]
 - ["VX6geDaHb9GameState", "init"]
 - ["VX6geDaHb9GameState", "playerChoices"]
 - ["VX6geDaHb9GameState", "playerScore"]
+- ["VX6geDaHb9GameState", "poemRight"]
 - ["VX6geDaHb9GameState", "status"]
 - ["OX6geDaHb10GameStatus", "Int"]
 - ["OX6geDaHb10GameStatus", "Result"]
@@ -260,6 +263,7 @@ depends-member:
 - ["OX6geDaHb10GameStatus", "finished"]
 - ["OX6geDaHb10GameStatus", "notStarted"]
 - ["OX6geDaHb10GameStatus", "turnComplete"]
+- ["OX6geDaHb10GameStatus", "turnRight"]
 - ["Ps8Hashable", "Name"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "add"]
@@ -585,4 +589,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/yuannnn/SongShi/\u8BF5\u8BD7/SQLiteBridge.h"
-interface-hash: "37a6eedf7a2df77c360fa4a0f833e76b"
+interface-hash: "c3f41662d0a217c9f5746972d50a827d"

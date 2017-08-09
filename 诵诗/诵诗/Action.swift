@@ -101,7 +101,7 @@ class ChoiceAction: Action {
     
     override func encode(with aCoder: NSCoder) {
         super.encode(with: aCoder)
-//        aCoder.encode(value.rawValue, forKey: ValueKey)//不知道这句话有什么用！！！！！
+        aCoder.encode(1, forKey: ValueKey)//不知道这句话有什么用！！！！！
     }
     
     override var description: String {

@@ -28,33 +28,6 @@
           'external-contents': "/Users/yuannnn/SongShi/\u8BF5\u8BD7/DerivedData/Build/Intermediates/IBDesignables/Intermediates/Pods.build/Debug-iphonesimulator/CircleProgressView.build/module.modulemap"
         }
       ]
-    },
-    {
-      'type': 'directory',
-      'name': "/Users/yuannnn/SongShi/\u8BF5\u8BD7/DerivedData/Build/Intermediates/IBDesignables/Products/Debug-iphonesimulator/Pods___.framework/Headers",
-      'contents': [
-        {
-          'type': 'file',
-          'name': "Pods-\u8BF5\u8BD7-umbrella.h",
-          'external-contents': "/Users/yuannnn/SongShi/\u8BF5\u8BD7/Pods/Target Support Files/Pods-\u8BF5\u8BD7/Pods-\u8BF5\u8BD7-umbrella.h"
-        },
-        {
-          'type': 'file',
-          'name': "Pods___-Swift.h",
-          'external-contents': "/Users/yuannnn/SongShi/\u8BF5\u8BD7/DerivedData/Build/Intermediates/IBDesignables/Products/Debug-iphonesimulator/Pods___.framework/Headers/Pods___-Swift.h"
-        }
-      ]
-    },
-    {
-      'type': 'directory',
-      'name': "/Users/yuannnn/SongShi/\u8BF5\u8BD7/DerivedData/Build/Intermediates/IBDesignables/Products/Debug-iphonesimulator/Pods___.framework/Modules",
-      'contents': [
-        {
-          'type': 'file',
-          'name': "module.modulemap",
-          'external-contents': "/Users/yuannnn/SongShi/\u8BF5\u8BD7/DerivedData/Build/Intermediates/IBDesignables/Intermediates/Pods.build/Debug-iphonesimulator/Pods-\u8BF5\u8BD7.build/module.modulemap"
-        }
-      ]
     }
   ]
 }

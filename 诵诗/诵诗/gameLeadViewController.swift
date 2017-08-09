@@ -28,6 +28,7 @@ class gameLeadViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         match?.endMatch(withResults: [0:Result.lost,1:Result.lost])
+//        GKLocalPlayer.localPlayer().deleteSavedGames(withName: "12", completionHandler: nil)
     }
     
     //以上新家
@@ -43,6 +44,16 @@ class gameLeadViewController: UIViewController {
             }
             self.present(vc, animated: true, completion: nil)
         }
+//        localPlayer.fetchSavedGames(completionHandler: {(names, error) in
+//            if names != nil {
+//                for name1 in names! {
+//                    if name1 != nil {
+//                        localPlayer.deleteSavedGames(withName: String(describing: name1.name), completionHandler: nil)
+//                    }
+//                }
+//            }
+//        })
+        localPlayer.deleteSavedGames(withName: String(describing: match?.identifier), completionHandler: nil)
         //登录一次以后就自动登录了
         self.isLoggedIn = localPlayer.isAuthenticated
         
@@ -68,6 +79,7 @@ class gameLeadViewController: UIViewController {
         matchRequest.defaultNumberOfPlayers = players
         matchRequest.maxPlayers = players
         matchRequest.minPlayers = players
+        
         let controller = GKTurnBasedMatchmakerViewController(matchRequest: matchRequest)
         controller.showExistingMatches = false
         controller.turnBasedMatchmakerDelegate = self as GKTurnBasedMatchmakerViewControllerDelegate
@@ -86,12 +98,12 @@ class gameLeadViewController: UIViewController {
 
 extension gameLeadViewController: GKTurnBasedMatchmakerViewControllerDelegate {
     func turnBasedMatchmakerViewControllerWasCancelled(_ viewController: GKTurnBasedMatchmakerViewController) {
-//        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func turnBasedMatchmakerViewController(_ viewController: GKTurnBasedMatchmakerViewController, didFailWithError error: Error) {
         print(error.localizedDescription)
-//        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
