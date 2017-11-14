@@ -1,0 +1,15 @@
+PODS:
+  - CircleProgressView (1.1.2)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - CircleProgressView (~> 1.0)
+  - SnapKit (~> 4.0.0)
+
+SPEC CHECKSUMS:
+  CircleProgressView: 1e25a96d95bfabaaf91fad52ed801d12af057170
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: afbca92afe2dd95af3da6f3bd46399501b8b3c13
+
+COCOAPODS: 1.3.1

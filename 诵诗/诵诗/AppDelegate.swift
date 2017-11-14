@@ -12,8 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    static var entranceView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "entrance")
     
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -36,7 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefaults.setValue(currentAppVersion, forKey: "appVersion")
             
             let guideViewController = storyboard.instantiateViewController(withIdentifier: "GuideViewController") as! GuideViewController
-            self.window?.rootViewController = guideViewController
+            
+            let nav = UINavigationController.init(rootViewController: guideViewController)
+            
+            self.window?.rootViewController = nav
         }
 
         
